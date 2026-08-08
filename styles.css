@@ -2974,3 +2974,10 @@ h2.section-label,
     line-height: 24.3px !important;
   }
 }
+
+/* Guarantee zero horizontal page overflow on real mobile devices */
+html, body {
+  overflow-x: hidden !important;
+  max-width: 100% !important;
+  width: 100% !important;
+}
