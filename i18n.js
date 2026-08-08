@@ -17,7 +17,7 @@ const translations = {
 
     // Intro
     'hero.desc': 'sou bacharelando em <span style="background: #ee5843; color: #ffffff !important; padding: 2px 6px; border-radius: 4px; font-weight: 500;">ciência da computação</span> pela ufg, atualmente aprofundando conhecimentos em <span style="background: #ee5843; color: #ffffff !important; padding: 2px 6px; border-radius: 4px; font-weight: 500;">engenharia de machine learning</span>. líder de comunidade, organizador voluntário de eventos de tecnologia e, nas horas vagas, fotógrafo de rua 📸',
-    'hero.cta': 'para oportunidades de trabalho ou dúvidas gerais, entre em contato comigo pelo <a href="https://www.linkedin.com/in/wendelmarques/" class="link-email">linkedin</a> ou envie um e-mail para wendelmjs@proton.me<span class="cursor-blink" style="background: #a1a1a1;"></span>',
+    'hero.cta': 'para oportunidades de trabalho ou dúvidas gerais, entre em contato comigo pelo <a href="https://www.linkedin.com/in/wendelmarques/" target="_blank" rel="noopener noreferrer" class="link-email">linkedin</a> ou envie um e-mail para wendelmjs@proton.me<span class="cursor-blink" style="background: #a1a1a1;"></span>',
 
     // Section Titles
     'sec.experience': '// EXPERIÊNCIA',
@@ -150,7 +150,7 @@ const translations = {
 
     // Intro
     'hero.desc': 'I am a B.Sc. candidate in <span style="background: #ee5843; color: #ffffff !important; padding: 2px 6px; border-radius: 4px; font-weight: 500;">Computer Science</span> at UFG, currently specializing in <span style="background: #ee5843; color: #ffffff !important; padding: 2px 6px; border-radius: 4px; font-weight: 500;">Machine Learning Engineering</span>. Community leader, volunteer tech event organizer, and street photographer in my spare time 📸',
-    'hero.cta': 'for career opportunities or general inquiries, get in touch via <a href="https://www.linkedin.com/in/wendelmarques/" class="link-email">linkedin</a> or send an email to wendelmjs@proton.me<span class="cursor-blink" style="background: #a1a1a1;"></span>',
+    'hero.cta': 'for career opportunities or general inquiries, get in touch via <a href="https://www.linkedin.com/in/wendelmarques/" target="_blank" rel="noopener noreferrer" class="link-email">linkedin</a> or send an email to wendelmjs@proton.me<span class="cursor-blink" style="background: #a1a1a1;"></span>',
 
     // Section Titles
     'sec.experience': '// EXPERIENCE',
