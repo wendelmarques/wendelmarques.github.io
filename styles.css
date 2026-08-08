@@ -2849,3 +2849,118 @@ header.hero, .hero, section, .gh-section {
     font-size: 12.8px !important; /* 80% of 16px */
   }
 }
+
+/* ============================================================
+   SECTION TITLES ACCENT ORANGE COLOR OVERRIDE (#ee5843)
+   ============================================================ */
+.section-label,
+h2.section-label,
+.gh-header h2,
+#experiencia .section-label,
+#projetos .section-label,
+#contribuicoes .section-label,
+#voluntariado .section-label,
+#competicoes .section-label {
+  color: #ee5843 !important;
+}
+
+/* ============================================================
+   HAMBURGER MOBILE MENU (3 TRACINHOS) STYLING
+   ============================================================ */
+.mobile-menu-btn {
+  display: none !important;
+  background: transparent !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 6px !important;
+  padding: 5px 8px !important;
+  color: #171717 !important;
+  cursor: pointer !important;
+  transition: background 0.15s ease, border-color 0.15s ease !important;
+}
+
+.mobile-menu-btn:hover {
+  background: rgba(0, 0, 0, 0.04) !important;
+  border-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+@media (max-width: 768px) {
+  .mobile-menu-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .navlinks {
+    display: none !important;
+    position: fixed !important;
+    top: 60px !important;
+    right: 16px !important;
+    width: 210px !important;
+    background: #ffffff !important;
+    border: 1px solid rgba(0, 0, 0, 0.12) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2) !important;
+    padding: 12px 16px !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    z-index: 99999999 !important;
+  }
+
+  .navlinks.show-mobile {
+    display: flex !important;
+  }
+
+  .navlinks a {
+    font-size: 15px !important;
+    color: #171717 !important;
+    padding: 4px 0 !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+  }
+
+  .navlinks a:last-child {
+    border-bottom: none !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-menu-btn {
+    display: none !important;
+  }
+
+  .navlinks {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 22px !important;
+    position: static !important;
+    box-shadow: none !important;
+    border: none !important;
+    background: transparent !important;
+    padding: 0 !important;
+    width: auto !important;
+  }
+}
+
+/* Guarantee brand, language selector, and hamburger button are on the exact same line on mobile */
+@media (max-width: 768px) {
+  nav .inner {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+    padding: 12px 16px !important;
+  }
+
+  .brand {
+    font-size: 16px !important;
+    margin-right: auto !important;
+  }
+
+  .nav-right {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 10px !important;
+    margin-left: auto !important;
+  }
+}

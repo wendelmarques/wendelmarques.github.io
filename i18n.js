@@ -291,6 +291,25 @@ document.addEventListener('DOMContentLoaded', () => {
   const langBtn = document.getElementById('lang-btn');
   const langMenu = document.getElementById('lang-menu');
   const langOptions = document.querySelectorAll('.lang-option');
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const navLinks = document.getElementById('nav-links');
+
+  if (mobileMenuBtn && navLinks) {
+    mobileMenuBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      navLinks.classList.toggle('show-mobile');
+    });
+
+    document.addEventListener('click', () => {
+      navLinks.classList.remove('show-mobile');
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('show-mobile');
+      });
+    });
+  }
 
   if (langBtn && langMenu) {
     function positionDropdown() {
