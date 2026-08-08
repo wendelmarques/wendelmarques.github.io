@@ -2964,3 +2964,13 @@ h2.section-label,
     margin-left: auto !important;
   }
 }
+
+/* Responsive reduction to 90% font size for hero contact text */
+@media (max-width: 768px) {
+  .hero-contact-text,
+  p[data-i18n="hero.contact"],
+  span[data-i18n="hero.cta"] {
+    font-size: 17.1px !important; /* 90% of 19px desktop size */
+    line-height: 24.3px !important;
+  }
+}
