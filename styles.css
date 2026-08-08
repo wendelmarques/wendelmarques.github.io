@@ -221,7 +221,7 @@ h1,h2,h3,.mono-display{font-family:'Inter', sans-serif; font-weight:800; letter-
 
 /* NAV — floating glass bar */
 nav{
-  position:sticky; top:0; z-index:50;
+  position:relative !important; top:auto !important; z-index:50;
   border-bottom:1px solid var(--line);
   background:rgba(255, 255, 255, 0.95);
   backdrop-filter:blur(18px) saturate(140%);
@@ -2610,4 +2610,243 @@ footer .inner{
 
 .lang-option.active .lang-code {
   color: #ee5843;
+}
+
+/* Responsive Menu Links Font Size Reduction to 90% */
+@media (max-width: 768px) {
+  .navlinks a {
+    font-size: 14.4px !important;
+  }
+}
+
+/* ============================================================
+   MASTER LANGUAGE DROPDOWN Z-INDEX & OVERLAY FIX
+   ============================================================ */
+nav {
+  z-index: 999999 !important;
+  overflow: visible !important;
+}
+
+nav .inner {
+  z-index: 999999 !important;
+  overflow: visible !important;
+}
+
+.lang-selector-wrapper {
+  position: relative !important;
+  z-index: 1000000 !important;
+  overflow: visible !important;
+}
+
+.lang-dropdown {
+  position: absolute !important;
+  top: calc(100% + 6px) !important;
+  right: 0 !important;
+  z-index: 9999999 !important;
+  background: #ffffff !important;
+  border: 1px solid rgba(0, 0, 0, 0.12) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25) !important;
+  min-width: 180px !important;
+}
+
+.lang-dropdown.show {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  z-index: 9999999 !important;
+}
+
+/* Absolute top stacking context for nav and lang-dropdown to defeat backdrop-filter stacking */
+header.hero, .hero, section, .gh-section {
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+.global-particles, #stars-canvas {
+  z-index: 0 !important;
+}
+
+.lang-selector-wrapper {
+  position: relative !important;
+  z-index: 999999999 !important;
+}
+
+.lang-dropdown {
+  position: absolute !important;
+  top: calc(100% + 6px) !important;
+  right: 0 !important;
+  z-index: 9999999999 !important;
+  background: #ffffff !important;
+  border: 1px solid rgba(0, 0, 0, 0.15) !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35) !important;
+}
+
+.lang-dropdown.show {
+  display: block !important;
+  z-index: 9999999999 !important;
+}
+
+/* ============================================================
+   PORTAL POSITION FIXED STRATEGY FOR LANG-DROPDOWN
+   ============================================================ */
+.lang-dropdown {
+  position: fixed !important;
+  z-index: 99999999 !important;
+  background: #ffffff !important;
+  border: 1px solid rgba(0, 0, 0, 0.12) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25) !important;
+  min-width: 180px !important;
+}
+
+.lang-dropdown.show {
+  display: block !important;
+  z-index: 99999999 !important;
+}
+
+/* ============================================================
+   COMPETIÇÕES — alinhamento responsivo título / badge de ano-local
+   (bloco único; substitui as 5+ tentativas conflitantes anteriores)
+   ============================================================ */
+@media (min-width: 601px) {
+  #competicoes .comp-header-row {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    width: 100% !important;
+  }
+
+  #competicoes .comp-date.badge-ano-local {
+    margin-left: 0 !important;
+  }
+}
+
+@media (max-width: 600px) {
+  #competicoes .comp-row {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+    padding: 14px 0 !important;
+    width: 100% !important;
+    text-align: left !important;
+  }
+
+  #competicoes .comp-row .minimal-icon {
+    flex-shrink: 0 !important;
+    margin-top: 2px !important;
+  }
+
+  #competicoes .comp-row > div:nth-child(2) {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+    flex: 1 !important;
+    gap: 6px !important;
+    width: 100% !important;
+  }
+
+  #competicoes .comp-header-row {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    text-align: left !important;
+    gap: 6px !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+  }
+
+  #competicoes .comp-title {
+    align-self: flex-start !important;
+    margin-left: 0 !important;
+    text-align: left !important;
+    display: block !important;
+    width: 100% !important;
+  }
+
+  #competicoes .comp-date {
+    align-self: flex-start !important;
+    margin-top: 6px !important;
+    text-align: left !important;
+    display: inline-block !important;
+  }
+
+  /* Compensa o padding-left (8px) da "pílula" do badge, para o texto
+     "2025" alinhar visualmente com a primeira letra do título quando
+     o badge cai para a linha de baixo. */
+  #competicoes .comp-date.badge-ano-local {
+    margin-left: -8px !important;
+  }
+
+  #competicoes .contrib-desc {
+    align-self: flex-start !important;
+    margin-left: 0 !important;
+    text-align: left !important;
+    margin-top: 6px !important;
+  }
+}
+
+
+/* ============================================================
+   VOLUNTARIADO BLOCKQUOTE PULL-QUOTE STYLING
+   ============================================================ */
+.vol-blockquote {
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 17px !important;
+  line-height: 25px !important;
+  font-style: italic !important;
+  color: rgb(23, 23, 23) !important;
+  margin: 0 0 16px 0 !important;
+  border-left: 3px solid #f9594a !important;
+  padding-left: 16px !important;
+  position: relative !important;
+  background: transparent !important;
+}
+
+.vol-blockquote::before {
+  content: "“";
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 26px;
+  line-height: 0;
+  color: #f9594a;
+  margin-right: 6px;
+  vertical-align: -4px;
+}
+
+/* ============================================================
+   NAV — comportamento final (bloco único, sem duplicatas)
+   ============================================================ */
+
+/* 1. Nav NUNCA fica fixo/sticky no topo — rola normalmente com a
+      página em qualquer tamanho de tela. Se isso não estiver
+      funcionando no navegador, é cache: force Ctrl+F5 (ou
+      Cmd+Shift+R no Mac) depois de publicar. */
+nav {
+  position: relative !important;
+  top: auto !important;
+  bottom: auto !important;
+}
+
+/* 2. Em telas largas (desktop), o seletor de idioma fica colado na
+      borda direita da TELA INTEIRA (viewport), não na borda do
+      container de conteúdo. Em telas estreitas mantém o
+      comportamento padrão dentro do fluxo do menu mobile. */
+@media (min-width: 769px) {
+  .lang-selector-wrapper {
+    position: absolute !important;
+    right: 32px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    margin-left: 0 !important;
+    z-index: 1001 !important;
+  }
 }

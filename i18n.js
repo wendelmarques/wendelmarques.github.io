@@ -272,20 +272,47 @@ document.addEventListener('DOMContentLoaded', () => {
   const currentLang = localStorage.getItem('site_lang') || 'pt';
   setLanguage(currentLang);
 
-  // Setup event listeners for dropdown buttons
+  // Setup event listeners for dropdown buttons with position: fixed viewport portal strategy
   const langBtn = document.getElementById('lang-btn');
   const langMenu = document.getElementById('lang-menu');
   const langOptions = document.querySelectorAll('.lang-option');
 
   if (langBtn && langMenu) {
+    function positionDropdown() {
+      const rect = langBtn.getBoundingClientRect();
+      langMenu.style.position = 'fixed';
+      langMenu.style.top = (rect.bottom + 6) + 'px';
+      langMenu.style.right = (window.innerWidth - rect.right) + 'px';
+      langMenu.style.left = 'auto';
+      langMenu.style.zIndex = '99999999';
+    }
+
     langBtn.addEventListener('click', (e) => {
       e.stopPropagation();
-      langMenu.classList.toggle('show');
+      const isShowing = langMenu.classList.contains('show');
+      if (!isShowing) {
+        positionDropdown();
+        langMenu.classList.add('show');
+      } else {
+        langMenu.classList.remove('show');
+      }
     });
 
     document.addEventListener('click', () => {
       langMenu.classList.remove('show');
     });
+
+    window.addEventListener('resize', () => {
+      if (langMenu.classList.contains('show')) {
+        positionDropdown();
+      }
+    });
+
+    window.addEventListener('scroll', () => {
+      if (langMenu.classList.contains('show')) {
+        positionDropdown();
+      }
+    }, { passive: true });
 
     langOptions.forEach(opt => {
       opt.addEventListener('click', (e) => {
