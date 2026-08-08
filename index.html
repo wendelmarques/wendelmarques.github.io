@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>wwwendel marques</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="home-page">
+
+<svg width="0" height="0" style="position:absolute">
+ <symbol id="mascot" viewBox="0 0 120 120">
+ <defs>
+  <linearGradient id="mascotGrad" x1="0" y1="0" x2="1" y2="1">
+  <stop offset="0%" stop-color="#58a6ff"/>
+  <stop offset="55%" stop-color="#d2a8ff"/>
+  <stop offset="100%" stop-color="#ff7b72"/>
+  </linearGradient>
+ </defs>
+ <g stroke="#20232b" stroke-width="6" stroke-linecap="round">
+  <line x1="60" y1="6" x2="60" y2="20"/>
+  <line x1="30" y1="14" x2="36" y2="27"/>
+  <line x1="90" y1="14" x2="84" y2="27"/>
+  <line x1="12" y1="40" x2="26" y2="46"/>
+  <line x1="10" y1="72" x2="24" y2="68"/>
+  <line x1="26" y1="98" x2="34" y2="88"/>
+ </g>
+ <circle cx="64" cy="64" r="40" fill="url(#mascotGrad)" stroke="#20232b" stroke-width="6"/>
+ <circle cx="52" cy="58" r="6" fill="#ffffff"/>
+ <circle cx="76" cy="56" r="6" fill="#ffffff"/>
+ <path d="M50 74 Q64 86 80 70" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round"/>
+ </symbol>
+</svg>
+
+<nav>
+ <div class="inner">
+ <a class="brand active" href="#">// wwwendel</a>
+ <div class="navlinks" style="display: flex; align-items: center; gap: 18px;">
+  <a href="#experiencia" data-i18n="nav.experience">experiência</a>
+  <a href="#contribuicoes" data-i18n="nav.research">pesquisa</a>
+  <a href="#voluntariado" data-i18n="nav.volunteering">voluntariado</a>
+  <a href="#projetos" data-i18n="nav.projects">projetos</a>
+  <!-- <a href="#competicoes" data-i18n="nav.hackathons">hackathons</a> -->
+  <a href="blog.html" data-i18n="nav.blog">blog</a>
+  
+  <!-- Language Selector Dropdown -->
+  <div class="lang-selector-wrapper">
+    <button class="lang-selector-btn" id="lang-btn" aria-label="Selecione o idioma">
+      <svg class="lang-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m5 8 6 6"/>
+        <path d="m4 14 6-6 2-3"/>
+        <path d="M2 5h12"/>
+        <path d="M7 2h1"/>
+        <path d="m22 22-5-10-5 10"/>
+        <path d="M14 18h6"/>
+      </svg>
+      <svg class="lang-arrow" width="10" height="10" viewBox="0 0 12 12" fill="currentColor">
+        <path d="M2.5 4.5L6 8L9.5 4.5H2.5Z"/>
+      </svg>
+    </button>
+    <div class="lang-dropdown" id="lang-menu">
+      <button class="lang-option active" data-lang="pt">
+        <span class="lang-code">BR</span> Português (Brasil)
+      </button>
+      <button class="lang-option" data-lang="en">
+        <span class="lang-code">US</span> English
+      </button>
+    </div>
+  </div>
+ </div>
+ </div>
+</nav>
+
+<header class="hero" style="position: relative; text-align: center; padding-top: 80px; padding-bottom: 24px; overflow: hidden; background: #ffffff; color: #171717;">
+ <!-- Glow Backdrop -->
+ <div class="home-glow-backdrop"></div>
+ 
+ <div class="wrap" style="position: relative; z-index: 10;">
+ <div class="intro profile-intro">
+  
+  <div class="intro-text">
+    <div class="photo">
+     <img src="images/foto.jpg" alt="Wendel Marques de Jesus Souza">
+    </div>
+    
+    <h1 class="intro-title" style="font-size: 24px; font-weight: 600; color: #171717; color: lab(7.78201 -0.0000149012 0); font-family: 'Inter', sans-serif; margin: 0 0 24px 0; letter-spacing:-0.03em; line-height: 32px; text-align: left;">
+      wwwendel marques
+      <span class="intro-description" data-i18n="hero.desc" data-i18n-html="true" style="display: block; color: #525252; color: lab(34.924 0 0); font-weight: 500; font-size: 24px; line-height: 32px; letter-spacing: -0.015em; font-family: 'Inter', sans-serif; margin-top: 12px;">
+      sou bacharelando em <span style="background: #ee5843; color: #ffffff !important; padding: 2px 6px; border-radius: 4px; font-weight: 500;">ciência da computação</span> pela ufg, atualmente aprofundando conhecimentos em <span style="background: #ee5843; color: #ffffff !important; padding: 2px 6px; border-radius: 4px; font-weight: 500;">engenharia de machine learning</span>. líder de comunidade, organizador voluntário de eventos de tecnologia e, nas horas vagas, fotógrafo de rua 📸
+      </span>
+    </h1>
+    
+    <div class="intro-cta" style="margin-top: 28px; padding: 20px 24px; border-radius: 14px; background: rgba(0, 0, 0, 0.03); border: 1px solid rgba(0, 0, 0, 0.08); backdrop-filter: blur(8px); display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;">
+     <span class="contrib-desc" data-i18n="hero.cta" data-i18n-html="true">
+  para oportunidades de trabalho ou dúvidas gerais, entre em contato comigo pelo <a href="https://www.linkedin.com/in/wendelmarques/" class="link-email">linkedin</a> ou envie um e-mail para wendelmjs@proton.me<span class="cursor-blink" style="background: #a1a1a1;"></span>
+</span>
+    </div>
+  
+  <!-- <div class="row-main"><span class="title">vamos conversar?</span></div> -->
+
+ 
+
+  
+  </div>
+
+
+  <div class="intro-social" style="display:flex; justify-content:flex-start; gap:20px; align-items:center; margin-top:24px;">
+     <a href="mailto:wendelmjs@proton.me" class="link-email">email</a>
+     <a href="https://github.com/wendelmarques" target="_blank" class="link-github">github</a>
+     <a href="https://www.linkedin.com/in/wendelmarques/" target="_blank" class="link-linkedin">linkedin</a>
+     <a href="https://lattes.cnpq.br/6404122317003520" target="_blank" class="link-lattes">lattes</a>
+     <a href="http://instagram.com/gdg_goiania/" target="_blank" class="link-gdg"><span class="l-y">g</span><span class="l-g">d</span><span class="l-r">g</span>&nbsp;<span class="l-b">g</span><span class="l-y">o</span><span class="l-r">i</span><span class="l-g">â</span><span class="l-b">n</span><span class="l-y">i</span><span class="l-r">a</span></a>
+  </div>
+  </div>
+  
+ </div>
+ </div>
+</header>
+
+
+<!-- EXPERIÊNCIA -->
+<section class="gh-section" id="experiencia">
+  <div class="wrap">
+    <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 24px;">
+      <h2 class="section-label" style="margin-bottom: 0;" data-i18n="sec.experience">// EXPERIÊNCIA</h2>
+      <a href="#" target="_blank" class="section-header-btn"><span data-i18n="btn.pdf">currículo em pdf</span> <svg class="link-arrow" width="15" height="15" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4.5 11.5L11.5 4.5M11.5 4.5H5.5M11.5 4.5V10.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg></a>
+    </div>
+    <div class="minimal-list">
+      
+      <!-- Item 1 -->
+      <div class="minimal-row">
+        <div class="minimal-left">
+          <div class="minimal-icon"><img src="logos/logo_akcit.png" alt="AKCIT"></div>
+          <span class="minimal-title">akcit/ufg</span>
+          <span class="minimal-role" data-i18n="exp.1.role">comunidade de startups</span>
+        </div>
+        <div class="minimal-date">26-<span data-i18n="exp.date.present">atual</span></div>
+      </div>
+
+      <!-- Item GDG -->
+      <div class="minimal-row">
+        <div class="minimal-left">
+          <div class="minimal-icon"><img src="logos/logo_gdg.png" alt="gdg"></div>
+          <span class="minimal-title">gdg goiânia (voluntariado)</span>
+          <span class="minimal-role" data-i18n="exp.gdg.role">gerente de comunidade</span>
+        </div>
+        <div class="minimal-date">22-<span data-i18n="exp.date.present">atual</span></div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="minimal-row">
+        <div class="minimal-left">
+          <div class="minimal-icon"><img src="logos/logo_akcit.png" alt="AKCIT"></div>
+          <span class="minimal-title">akcit/ufg</span>
+          <span class="minimal-role" data-i18n="exp.2.role">tutoria em gen ai</span>
+        </div>
+        <div class="minimal-date">2025—25</div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="minimal-row">
+        <div class="minimal-left">
+          <div class="minimal-icon"><img src="logos/logo_oi.png" alt="Oi S.A."></div>
+          <span class="minimal-title">oi s.a.</span>
+          <span class="minimal-role" data-i18n="exp.3.role">ciência de dados</span>
+        </div>
+        <div class="minimal-date">2022—23</div>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="minimal-row">
+        <div class="minimal-left">
+          <div class="minimal-icon"><img src="logos/logo_ceia.png" alt="CEIA"></div>
+          <span class="minimal-title">ceia/ufg</span>
+          <span class="minimal-role" data-i18n="exp.4.role">pd&i em visão computacional</span>
+        </div>
+        <div class="minimal-date">2021—22</div>
+      </div>
+
+      <!-- Item 5 -->
+      <div class="minimal-row">
+        <div class="minimal-left">
+          <div class="minimal-icon"><img src="logos/logo_fieg.png" alt="FIEG"></div>
+          <span class="minimal-title">fieg</span>
+          <span class="minimal-role" data-i18n="exp.5.role">engenharia de dados</span>
+        </div>
+        <div class="minimal-date">2020—21</div>
+      </div>
+
+      <!-- Item 6 -->
+      <div class="minimal-row">
+        <div class="minimal-left">
+          <div class="minimal-icon"><img src="logos/logo_ufg.png" alt="UFG"></div>
+          <span class="minimal-title">ufg</span>
+          <span class="minimal-role" data-i18n="exp.6.role">Suporte em TI</span>
+        </div>
+        <div class="minimal-date">2019-20</div>
+      </div>
+
+      <!-- Item 7 -->
+      <div class="minimal-row">
+        <div class="minimal-left">
+          <div class="minimal-icon"><img src="logos/logo_latam.png" alt="LATAM"></div>
+          <span class="minimal-title">latam airlines</span>
+          <span class="minimal-role" data-i18n="exp.7.role">jovem aprendiz</span>
+        </div>
+        <div class="minimal-date">2015—17</div>
+      </div>
+
+    </div>
+      
+      <!-- <div class="minimal-row">
+        <div class="minimal-left">
+          <div class="minimal-icon text-icon" style="background:var(--gradient); color:var(--accent-ink);">U</div>
+          <span class="minimal-title">universidade federal de goiás</span>
+          <span class="minimal-role">bacharelado em ciência da computação</span>
+        </div>
+        <div class="minimal-date">dez 2027 (previsto)</div>
+      </div> -->
+    </div>
+  </div>
+
+
+<!-- PROJETOS -->
+<section class="gh-section" id="projetos">
+  <div class="wrap">
+    <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 32px;">
+      <h2 class="section-label" style="margin-bottom: 0;" data-i18n="sec.projects">// PROJETOS</h2>
+      <a href="https://github.com/wendelmarques" target="_blank" class="section-header-btn"><span data-i18n="btn.github">acessar GitHub</span> <svg class="link-arrow" width="15" height="15" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4.5 11.5L11.5 4.5M11.5 4.5H5.5M11.5 4.5V10.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg></a>
+    </div>
+    
+    <div class="gh-features-grid">
+      
+      <!-- Feature Card 1: Sistema de Inteligência Jurídica -->
+      <div class="gh-feature-card">
+        <div class="gh-feature-info">
+          <p class="gh-feature-text">
+            <strong>
+              <a href="https://github.com/wendelmarques" target="_blank" class="custom-link">
+                <span class="link-text" data-i18n="proj.1.title">Sistema de Inteligência Jurídica &amp; Automação</span>
+                <svg class="link-arrow" width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4.5 11.5L11.5 4.5M11.5 4.5H5.5M11.5 4.5V10.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </strong> 
+            <span data-i18n="proj.1.desc">Fluxo agêntico para análise de sentenças judiciais em escala. Automatiza a extração de dados não estruturados, executa cálculos financeiros de condenações e consolida os resultados em dashboards e planilhas para a diretoria.</span>
+          </p>
+
+          <div class="project-stack-group" style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-top: 16px;">
+            <span class="stack-label" style="font-family: 'Consolas', monospace; font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600;">Stack:</span>
+            <span class="tech-badge">Rivet</span>
+            <span class="tech-badge">Fluxos Agênticos</span>
+            <span class="tech-badge">LLMs</span>
+            <span class="tech-badge">Extração de Dados</span>
+          </div>
+        </div>
+      </div>
+      
+
+      <!-- Feature Card 2: Visão Computacional CEIA -->
+      <div class="gh-feature-card">
+        <div class="gh-feature-info">
+          <p class="gh-feature-text">
+            <strong>
+              <a href="https://github.com/wendelmarques" target="_blank" class="custom-link">
+                <span class="link-text" data-i18n="proj.2.title">Classificação de Imagens com Texto Manuscrito</span>
+                <svg class="link-arrow" width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4.5 11.5L11.5 4.5M11.5 4.5H5.5M11.5 4.5V10.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </strong> 
+            <span data-i18n="proj.2.desc">No CEIA/UFG, atuou na validação de dados de entrada com visão computacional, incluindo anotação de mais de 30 mil imagens para datasets de treinamento. Resultado: um mecanismo capaz de classificar imagens contendo textos manuscritos.</span>
+          </p>
+
+          <div class="project-stack-group" style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-top: 16px;">
+            <span class="stack-label" style="font-family: 'Consolas', monospace; font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600;">Stack:</span>
+            <span class="tech-badge">Python</span>
+            <span class="tech-badge">OpenCV</span>
+            <span class="tech-badge">TensorFlow</span>
+            <span class="tech-badge">Keras</span>
+            <span class="tech-badge">Scikit-learn</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  
+</section>
+<!-- REPOSITÓRIO EM DESTAQUE -->
+<section class="gh-section" id="repo-destaque" style="padding-bottom: 24px;">
+  <div class="wrap">
+    <div class="repo-card-featured">
+      <div class="repo-card-header">
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor" style="color: #ee5843;"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-1 1v.875a.625.625 0 1 1-1.25 0V2.5zm2.5-1a1 1 0 0 0-1 1v8.086A2.493 2.493 0 0 1 4.5 10.5h8v-9h-8z"/></svg>
+          <span style="font-family: 'Consolas', monospace; font-size: 12px; color: var(--muted); text-transform: lowercase; letter-spacing: 0.05em;" data-i18n="sec.featured_repo">// Repositório em Destaque</span>
+        </div>
+        <span class="repo-badge-public" data-i18n="repo.tag">Public Repo</span>
+      </div>
+
+      <div class="repo-card-body">
+        <h3 class="repo-card-title">
+          <a href="https://github.com/wendelmarques/materiais-de-estudos-sobre-data-science-deep-machine-learning" target="_blank">
+            materiais-de-estudos-sobre-data-science-deep-machine-learning
+            <svg class="link-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4.5 11.5L11.5 4.5M11.5 4.5H5.5M11.5 4.5V10.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </h3>
+        <p class="repo-card-desc" data-i18n="repo.desc">
+          💻 📓 Guia prático de estudos (nível iniciante ao avançado) sobre Inteligência Artificial. Organiza trilhas de aprendizagem, canais, livros e roadmaps sobre Data Science, Machine Learning e Deep Learning (majoritariamente gratuitos e em PT-BR).
+        </p>
+      </div>
+
+      <div class="repo-card-footer">
+        <div class="repo-stats-group">
+          <a href="https://github.com/wendelmarques/materiais-de-estudos-sobre-data-science-deep-machine-learning/stargazers" target="_blank" class="repo-stat-item star">
+            <svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor"><path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.75.75 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25z"/></svg>
+            <strong>711</strong> <span data-i18n="repo.stars">estrelas</span>
+          </a>
+          <a href="https://github.com/wendelmarques/materiais-de-estudos-sobre-data-science-deep-machine-learning/forks" target="_blank" class="repo-stat-item fork">
+            <svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor"><path d="M5 3.25a1.75 1.75 0 1 1 3.5 0v2.5a.75.75 0 0 1-1.5 0v-2.5a.25.25 0 0 0-.25-.25.25.25 0 0 0-.25.25v2.5a.75.75 0 0 1-1.5 0v-2.5zm4.75-1.75a1.75 1.75 0 1 0 0 3.5 1.75 1.75 0 0 0 0-3.5zm-6 0a1.75 1.75 0 1 0 0 3.5 1.75 1.75 0 0 0 0-3.5zM2.5 12.75a1.75 1.75 0 1 1 3.5 0 1.75 1.75 0 0 1-3.5 0zm7.5 0a1.75 1.75 0 1 1 3.5 0 1.75 1.75 0 0 1-3.5 0z"/></svg>
+            <strong>134</strong> <span data-i18n="repo.forks">forks</span>
+          </a>
+          <a href="https://github.com/wendelmarques/materiais-de-estudos-sobre-data-science-deep-machine-learning/watchers" target="_blank" class="repo-stat-item watch">
+            <svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor"><path d="M8 2c1.981 0 3.671.992 4.933 2.078 1.27 1.091 2.187 2.345 2.637 3.023a1.62 1.62 0 0 1 0 1.798c-.45.678-1.367 1.932-2.637 3.023C11.67 13.008 9.981 14 8 14c-1.981 0-3.671-.992-4.933-2.078C1.797 10.83.88 9.576.43 8.898a1.62 1.62 0 0 1 0-1.798c.45-.678 1.367-1.932 2.637-3.023C4.33 2.992 6.019 2 8 2zM1.605 7.9c.356.537 1.157 1.637 2.27 2.594C4.982 11.458 6.38 12.5 8 12.5c1.62 0 3.018-1.042 4.125-1.994 1.113-.957 1.914-2.057 2.27-2.594a.12.12 0 0 0 0-.132c-.356-.537-1.157-1.637-2.27-2.594C11.018 4.229 9.62 3.5 8 3.5c-1.62 0-3.018 1.042-4.125 1.994-1.113.957-1.914 2.057-2.27 2.594a.12.12 0 0 0 0 .132zM8 5a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"/></svg>
+            <strong>22</strong> <span data-i18n="repo.watch">watching</span>
+          </a>
+        </div>
+        <span class="repo-lang-tag"><span class="lang-dot"></span> Markdown / PT-BR</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTRIBUIÇÕES CIENTÍFICAS -->
+<section class="gh-section" id="contribuicoes">
+  <div class="wrap">
+    <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 28px;">
+      <h2 class="section-label" style="margin-bottom: 0;" data-i18n="sec.contributions">// CONTRIBUIÇÕES CIENTÍFICAS</h2>
+      <div style="display: flex; gap: 16px;">
+        <a href="https://lattes.cnpq.br/6404122317003520" target="_blank" class="section-header-btn">lattes <svg class="link-arrow" width="15" height="15" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4.5 11.5L11.5 4.5M11.5 4.5H5.5M11.5 4.5V10.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg></a>
+        <a href="https://scholar.google.com/citations?user=IqVb-0EAAAAJ&hl=en" target="_blank" class="section-header-btn">google scholar <svg class="link-arrow" width="15" height="15" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4.5 11.5L11.5 4.5M11.5 4.5H5.5M11.5 4.5V10.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg></a>
+      </div>
+    </div>
+    
+    <div class="contrib-list">
+      
+      <!-- Sub-label: Artigo -->
+      <div style="margin-bottom: 12px;">
+        <span style="font-family: 'Consolas', monospace; font-size: 11px; font-weight: 700; color: rgb(119, 119, 119); text-transform: lowercase ; letter-spacing: 0.05em;" data-i18n="sec.published_article">// ARTIGO PUBLICADO</span>
+      </div>
+
+      <!-- Item 1: Artigo -->
+      <div class="contrib-row" style="padding: 8px 0 20px 0; border-bottom: 1px solid var(--line); margin-bottom: 24px;">
+        <div style="display: flex; gap: 16px; align-items: flex-start;">
+          <div class="minimal-icon" style="margin-top: 2px;"><img src="logos/logo_ufg.png" alt="UFG"></div>
+          <div style="flex: 1;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px;">
+              <span class="contrib-title" style="font-weight: 600;"> <span style="font-family: 'Consolas', monospace; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: #e9e9e9; color: #080100;">ERI-GO (2021)</span> <span data-i18n="contrib.art1.title">Ontologia aplicada à redução de ruído em base de dados de tweets sobre mercado financeiro</span> </span>
+              
+            </div>
+            <span class="contrib-desc" style="margin-top: 8px; display: block;" data-i18n="contrib.art1.desc">Limpeza e estruturação de dados não estruturados de redes sociais para viabilizar análises e tomada de decisão automatizada.</span>
+            <div style="margin-top: 12px; display: flex; gap: 16px; font-size: 13px; align-items: center; flex-wrap: wrap;">
+              <span>DOI: <a href="https://doi.org/10.5753/erigo.2021.18431" target="_blank" class="doi-link">10.5753/erigo.2021.18431 <svg class="link-arrow" width="12" height="12" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4.5 11.5L11.5 4.5M11.5 4.5H5.5M11.5 4.5V10.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg></a></span>
+              <span style="color: var(--line);">•</span>
+              <a href="https://www.youtube.com/live/vJtCmHxU7t4?si=rXRASFPpRwvPhyWm&t=5371" target="_blank" class="doi-link"><span data-i18n="contrib.art1.yt">Apresentação no YouTube</span> <svg class="link-arrow" width="12" height="12" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4.5 11.5L11.5 4.5M11.5 4.5H5.5M11.5 4.5V10.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sub-label: Programas de Pesquisa -->
+      <div style="margin-bottom: 12px;">
+        <span style="font-family: 'Consolas', monospace; font-size: 11px; font-weight: 700; color: var(--muted); text-transform: lowercase; letter-spacing: 0.05em;" data-i18n="sec.research_programs">// PROGRAMAS DE PESQUISA & PD&I</span>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 16px;">
+        
+        <!-- Item 2: Programa UFG -->
+        <div class="contrib-row" style="padding: 8px 0; border-bottom: 1px solid var(--line);">
+          <div style="display: flex; gap: 16px; align-items: flex-start;">
+            <div class="minimal-icon" style="margin-top: 2px;"><img src="logos/logo_ufg.png" alt="UFG"></div>
+            <div style="flex: 1;">
+              <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px;">
+                <span class="contrib-title" style="font-weight: 600;" data-i18n="contrib.p2.title">Programa de Iniciação à Pesquisa/UFG</span>
+              </div>
+              <span class="contrib-desc" style="margin-top: 6px; display: block;" data-i18n="contrib.p2.desc">Período dedicado à experimentação metodológica e ao aprofundamento nos fundamentos teóricos de machine learning e ontologias.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3: Programa CEIA -->
+        <div class="contrib-row" style="padding: 8px 0;">
+          <div style="display: flex; gap: 16px; align-items: flex-start;">
+            <div class="minimal-icon" style="margin-top: 2px;"><img src="logos/logo_ceia.png" alt="CEIA"></div>
+            <div style="flex: 1;">
+              <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px;">
+                <span class="contrib-title" style="font-weight: 600;" data-i18n="contrib.p1.title">pd&amp;i - Centro de Excelência em ia/ufg</span>
+              </div>
+              <span class="contrib-desc" style="margin-top: 6px; display: block;" data-i18n="contrib.p1.desc">pesquisa aplicada em algoritmos inteligentes para plataformas educacionais, com foco em visão computacional.</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- VOLUNTARIADO -->
+<section class="gh-section" id="voluntariado">
+  <div class="wrap">
+    <h2 class="section-label" data-i18n="sec.volunteering">// VOLUNTARIADO &amp; comunidade</h2>
+    <div style="margin-bottom: 32px;">
+       <p style="font-family: 'Inter', sans-serif; font-weight: 600; font-size: 17px; line-height: 25px; color: rgb(23, 23, 23); margin: 0 0 8px 0;" data-i18n="vol.hero">
+  Acredito que tecnologia se constrói em comunidade — e que ela só é relevante quando é plural! 
+</p>
+      
+      <div class="gh-feature-box" style="margin: 16px 0; max-width: 540px;">
+        <div class="metrics-window" style="gap: 32px;">
+          <div class="metric-item">
+            <span class="m-val">10+</span>
+            <span class="m-lbl" data-i18n="vol.stat1.lbl">Conferências organizadas desde 2022</span>
+          </div>
+          <div class="metric-item">
+            <span class="m-val">5+</span>
+            <span class="m-lbl" data-i18n="vol.stat2.lbl">meetups organizados</span>
+          </div>
+          <div class="metric-item">
+            <span class="m-val">4.500+</span>
+            <span class="m-lbl" data-i18n="vol.stat3.lbl">Pessoas impactadas presencialmente</span>
+          </div>
+          <div class="metric-item">
+            <span class="m-val">3.000.000+</span>
+            <span class="m-lbl" data-i18n="vol.stat4.lbl">estudantes alcançados por plataforma educacional</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-showcase">
+      <!-- Left side: Accordions -->
+      <div class="accordion-list">
+        
+        <!-- Accordion Item 1 -->
+        <div class="acc-item" data-image="images/slides/1.jpg" data-video="Wq3UHWne1_0">
+          <div class="acc-header">
+            <h3>Google Developer Groups</h3>
+            <span class="acc-icon">+</span>
+          </div>
+          <div class="acc-body">
+            <div class="contrib-list">
+              <div class="contrib-row">
+                <span class="contrib-title">DevFest Cerrado 2026</span>
+                <span class="contrib-desc"><span style="color: #2ea043; display: inline-flex; align-items: center; gap: 6px; font-weight: 500; margin-left: 4px;"><span class="status-dot-green"></span>em andamento</span></span>
+              </div>
+              <div class="contrib-row">
+                <span class="contrib-title">DevFest Cerrado 2025</span>
+                <span class="contrib-desc">Organizador. 350+ participantes, 35 palestrantes em 7 trilhas simultâneas, incluindo trilha de mentorias e espaços para criança.</span>
+              </div>
+               <div class="contrib-row">
+                <span class="contrib-title">Build With AI 2025</span>
+                <span class="contrib-desc">Organizador. evento mão na massa para aprendizado em ia generativa. participaram cerca de 30 pessoas.</span>
+              </div>
+
+              <div class="contrib-row">
+                <span class="contrib-title">DevFest Cerrado 2024</span>
+                <span class="contrib-desc">Organizador. 800+ participantes, 39 palestrantes em seis trilhas simultâneas.</span>
+              </div>
+
+              <div class="contrib-row">
+                <span class="contrib-title">Build With AI 2024</span>
+                <span class="contrib-desc">Organizador. evento mão na massa para aprendizado em ia generativa. participaram cerca de 25 pessoas.</span>
+              </div>
+
+              <div class="contrib-row">
+                <span class="contrib-title">DevFest Cerrado 2023</span>
+                <span class="contrib-desc">Organizador. ~900 participantes, 40 palestras.</span>
+              </div>
+              
+              
+            </div>
+          </div>
+        </div>
+
+        <!-- Accordion Item 2 -->
+        <div class="acc-item" data-image="images/slides/2.jpg">
+          <div class="acc-header">
+            <h3>Women Techmakers</h3>
+            <span class="acc-icon">+</span>
+          </div>
+          <div class="acc-body">
+            <div class="contrib-list">
+              <div class="contrib-row">
+                <span class="contrib-title">International Women's Day Cerrado 2025 — #redefinepossible</span>
+                <span class="contrib-desc">Organizador. ~250 participantes, palco 100% feminino, 30+ atividades, ~20 voluntários.</span>
+              </div>
+              <div class="contrib-row">
+                <span class="contrib-title">IWD Cerrado 2024 — #impactthefuture</span>
+                <span class="contrib-desc">Organizador. 100% palestrantes mulheres, 250+ participantes, 20+ palestras.</span>
+              </div>
+              <div class="contrib-row">
+                <span class="contrib-title">IWD Cerrado 2023 — #daretobe</span>
+                <span class="contrib-desc">Organizador. 100% palestrantes mulheres, 400+ participantes, 20+ palestras.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Accordion Item 3 -->
+        <div class="acc-item" data-image="images/slides/gdsc.png">
+          <div class="acc-header">
+            <h3>Google DSC UFG</h3>
+            <span class="acc-icon">+</span>
+          </div>
+          <div class="acc-body">
+            <div class="contrib-list">
+              <div class="contrib-row">
+                <span class="contrib-title">Lead, Co-fundador e Organizador</span>
+                <span class="contrib-desc">Gestão da comunidade, organização de eventos e projetos de impacto social.</span>
+              </div><div class="contrib-row">
+                <span class="contrib-title">Atividades de letramento em computação em escolas municipais</span>
+                <span class="contrib-desc">Organizador • apresentamos conteúdos sobre visão computacional e machine learning</span>
+              </div>
+              
+              <div class="contrib-row">
+                <span class="contrib-title">Mulheres in Tech: mulheres negras na tecnologia (2022)</span> 
+                
+
+                  
+
+<span class="contrib-desc">Organizador • <a href="https://www.youtube.com/live/vJtCmHxU7t4?si=rXRASFPpRwvPhyWm&t=5371" target="_blank" class="doi-link" style="color: #f9594a; text-decoration: underline;">live nos canais da ufg e inf
+<svg class="link-arrow" width="12" height="12" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M4.5 11.5L11.5 4.5M11.5 4.5H5.5M11.5 4.5V10.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+  </a>com 4h de conteúdo  
+                  
+                  
+                  
+                  
+                  </span>
+              </div>
+
+
+
+                  
+
+
+
+
+
+
+
+
+              <div class="contrib-row">
+                <span class="contrib-title">Mulheres In Tech - Presencial(2022)</span>
+                <span class="contrib-desc">Organizador • primiero evento como líder de comunidade, foram cerca de 20 palestras ministradas por mulheres </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Accordion Item 4 -->
+        <div class="acc-item" data-image="images/slides/sbcas.avif">
+          <div class="acc-header">
+            <h3>sbc/ufg</h3>
+            <span class="acc-icon">+</span>
+          </div>
+          <div class="acc-body">
+            <div class="contrib-list">
+              <div class="contrib-row">
+                <!-- <span class="contrib-meta">Sociedade Brasileira de Computação / UFG</span> -->
+                <span class="contrib-title">24º Simpósio Brasileiro de Computação Aplicada à Saúde (SBCAS)</span>
+                <span class="contrib-desc">Membro do comitê organizador.</span>
+              </div>
+
+               <div class="contrib-row">
+                <!-- <span class="contrib-meta">Instituto de Informática — UFG</span> -->
+                <span class="contrib-title">workshop adas - inf/ufg</span>
+                <span class="contrib-desc">fotógrafo • evento de tecnologia com palestrantes mulheres  </span>
+              </div>
+
+              <div class="contrib-row">
+                <!-- <span class="contrib-meta">Instituto de Informática — UFG</span> -->
+                <span class="contrib-title">Semana de Integração - inf/ufg</span>
+                <span class="contrib-desc">apoio • evento de recepção de calouros(as) dos cursos de tecnologia do inf/ufg</span>
+              </div>
+              
+
+              <div class="contrib-row">
+                <span class="contrib-title">Escola Regional de Alto Desempenho do Centro-Oeste 2018</span>
+                <span class="contrib-desc">apoio em salas.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+         
+
+
+
+        <!-- Accordion Item 5 -->
+        <div class="acc-item" data-image="images/slides/Vestgeek.png">
+          <div class="acc-header">
+            <h3>Outras iniciativas</h3>
+            <span class="acc-icon">+</span>
+          </div>
+          <div class="acc-body">
+            <div class="contrib-list">
+              
+               <div class="contrib-row">
+                <span class="contrib-title">Vestgeek</span>
+                <span class="contrib-desc">Idealizador e criador de conteúdo (2015–2022). Projeto voluntário de apoio a vestibulandos, com mais de 3 milhões de visualizações e 80 mil seguidores nas redes sociais.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+                <!-- Accordion Item 6 -->
+        <div class="acc-item" data-image="images/slides/cajueiro.jpg">
+          <div class="acc-header">
+            <h3>palestras</h3>
+            <span class="acc-icon">+</span>
+          </div>
+          <div class="acc-body">
+            <div class="contrib-list">
+               <div class="contrib-row">
+                <span class="contrib-title">Cajueiro - Centro de Juventude</span>
+                <span class="contrib-desc">ministrei uma aula sobre inteligência artificial.</span>
+        </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right side: Image/Video preview -->
+      <div class="accordion-preview">
+        <img id="acc-preview-img" src="images/slides/1.jpg" alt="Preview de Evento" onerror="this.src='https://placehold.co/800x600/170b2c/d7b8ff?text=Foto'">
+        <iframe id="acc-preview-video" src="" title="Preview de Evento" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: none;"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPETIÇÕES -->
+<section class="gh-section" id="competicoes">
+  <div class="wrap">
+    <h2 class="section-label" data-i18n="sec.competitions">// COMPETIÇÕES &amp; HACKATHONS</h2>
+    
+    <div class="comp-list" style="display: flex; flex-direction: column; gap: 16px; margin-top: 16px;">
+      
+      <!-- Comp 1 -->
+      <div class="comp-row" style="padding: 12px 0 16px 0; border-bottom: 1px solid var(--line); display: flex; gap: 16px; align-items: flex-start;">
+        <div class="minimal-icon" style="width: 32px; height: 32px; flex-shrink: 0; margin-top: 2px;"><img src="logos/logo_usp.png" alt="USP"></div>
+        <div style="flex: 1;">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+            <span style="font-family: 'Inter', sans-serif; font-size: 17px; font-weight: 600; color: var(--text-bright);">Campus Mobile - Claro/ USP</span>
+            
+            <span style="font-family: 'Consolas', monospace; font-size: 12px; padding: 2px 8px; border-radius: 4px; background: rgba(255, 255, 255, 0.06); color: var(--muted);">2025 - são paulo</span>
+          </div>
+          <span style="font-family: 'Consolas', monospace; font-size: 12px; padding: 2px 8px; border-radius: 4px; background: #e6bdbb; color: #ff6159;">selecionado para imersão presencial de 1 semana</span><span class="contrib-desc" style="margin-top: 6px; display: block;">Envolveu o desenvolvimento solução com IA GEN, visão computacional, similaridade vetorial e RAG para construção de solução de impacto social.</span>
+        </div>
+      </div>
+
+      <!-- Comp 2 -->
+      <div class="comp-row" style="padding: 12px 0 16px 0; border-bottom: 1px solid var(--line); display: flex; gap: 16px; align-items: flex-start;">
+        <div class="minimal-icon" style="width: 32px; height: 32px; flex-shrink: 0; margin-top: 2px;"><img src="logos/logo_link.png" alt="Link School"></div>
+        <div style="flex: 1;">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+            <span style="font-family: 'Inter', sans-serif; font-size: 17px; font-weight: 600; color: var(--text-bright);">Startup School - Link School of Business</span>
+            <span style="font-family: 'Consolas', monospace; font-size: 12px; padding: 2px 8px; border-radius: 4px; background: rgba(255, 255, 255, 0.06); color: var(--muted);">2025 - são paulo</span>
+          </div>
+          <span class="contrib-desc" style="margin-top: 6px; display: block;">Programa de 4 meses: desenvolvimento e validação prática de modelo de negócio com IA integrada.</span>
+        </div>
+      </div>
+
+   
+
+
+
+
+
+
+      <!-- Comp 3 -->
+      <div class="comp-row" style="padding: 12px 0 16px 0; border-bottom: 1px solid var(--line); display: flex; gap: 16px; align-items: flex-start;">
+        <div class="minimal-icon" style="width: 32px; height: 32px; flex-shrink: 0; margin-top: 2px;"><img src="logos/logo_link.png" alt="Link School"></div>
+        <div style="flex: 1;">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+            <span style="font-family: 'Inter', sans-serif; font-size: 17px; font-weight: 600; color: var(--text-bright);">Hackathon Zero to Hero - Link</span>
+            <span style="font-family: 'Consolas', monospace; font-size: 12px; padding: 2px 8px; border-radius: 4px; background: rgba(255, 255, 255, 0.06); color: var(--muted);">2025 - são paulo</span>
+          </div>
+          <span class="contrib-desc" style="margin-top: 6px; display: block;">Maratona de 3 dias: construção de um MVP funcional do zero, apresentado a uma banca de especialistas.</span>
+        </div>
+      </div>
+
+
+       <!-- Comp 3 -->
+      <div class="comp-row" style="padding: 12px 0 16px 0; border-bottom: 1px solid var(--line); display: flex; gap: 16px; align-items: flex-start;">
+        <div class="minimal-icon" style="width: 32px; height: 32px; flex-shrink: 0; margin-top: 2px;"><img src="logos/logo_link.png" alt="Link School"></div>
+        <div style="flex: 1;">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+            <span style="font-family: 'Inter', sans-serif; font-size: 17px; font-weight: 600; color: var(--text-bright);">AKCIT Camp — Desenvolvendo Agentes de IA</span>
+            <span style="font-family: 'Consolas', monospace; font-size: 12px; padding: 2px 8px; border-radius: 4px; background: rgba(255, 255, 255, 0.06); color: var(--muted);">2025 - goiânia</span>
+          </div>
+          <span class="contrib-desc" style="margin-top: 6px; display: block;">Bootcamp de 4 semanas de orquestração multiagente (LangChain, CrewAI, LangGraph) com hackathon de 2 dias. Desenvolveu uma solução multiagêntica aplicada à educação.</span>
+        </div>
+      </div>
+
+
+
+
+<!-- Comp 3 -->
+      <div class="comp-row" style="padding: 12px 0 16px 0; border-bottom: 1px solid var(--line); display: flex; gap: 16px; align-items: flex-start;">
+        <div class="minimal-icon" style="width: 25px; height: 25px; flex-shrink: 0; margin-top: 2px;"><img src="logos/logo_goias.png" alt="Link School"></div>
+        <div style="flex: 1;">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+            <span style="font-family: 'Inter', sans-serif; font-size: 17px; font-weight: 600; color: var(--text-bright);">Ideathon governo de Goiás — Autocuidado para 60+</span>
+            <span style="font-family: 'Consolas', monospace; font-size: 12px; padding: 2px 8px; border-radius: 4px; background: rgba(255, 255, 255, 0.06); color: var(--muted);">2025 - são paulo</span>
+          </div>
+          <span class="contrib-desc" style="margin-top: 6px; display: block;">
+            Maratona de ideias na Campus Party para desenvolvimento solução voltada às pessoas 60+. foram duas maratonas, em cada uma pessoa 60+ participou das equipes.
+
+</span>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+      <!-- Comp 4 -->
+      <div class="comp-row" style="padding: 12px 0; display: flex; gap: 16px; align-items: flex-start;">
+        <div class="minimal-icon" style="width: 32px; height: 32px; flex-shrink: 0; margin-top: 2px;"><img src="logos/logo_nasa.webp" alt="NASA"></div>
+        <div style="flex: 1;">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+            <span style="font-family: 'Inter', sans-serif; font-size: 17px; font-weight: 600; color: var(--text-bright);">NASA Space Apps Challenge/ Goiânia</span>
+            <span style="font-family: 'Consolas', monospace; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: rgba(255, 255, 255, 0.06); color: var(--muted);">2024 - Goiânia</span>
+          </div>
+          <span class="contrib-desc" style="margin-top: 6px; display: block;">maratona de 2 dias para desenvolvimento de solução de dados com bases abertas da NASA.</span>
+        </div>
+      </div>
+
+      
+
+    </div>
+  </div>
+</section>
+<!-- 
+    </div>
+  </div>
+</section> -->
+
+
+<footer>
+ <div class="striped-divider"></div>
+ <div class="inner">
+  <div style="display: flex; flex-direction: column; gap: 4px;">
+    <span data-i18n="footer.location">wwwendel marques • baseado no brasil<span class="cursor-blink"></span></span>
+    <span style="font-size: 11px; opacity: 0.65;"><span data-i18n="footer.inspired">inspirado em</span> <a href="https://brianlovin.com/" target="_blank" style="color: inherit; text-decoration: underline;">brianlovin</a>, <a href="https://huyenchip.com/" target="_blank" style="color: inherit; text-decoration: underline;">huyenchip</a> &amp; <a href="https://weslley.io/" target="_blank" style="color: inherit; text-decoration: underline;">wellwelwel</a></span>
+  </div>
+  <div class="linkrow footer-links">
+   <a href="mailto:wendelmjs@proton.me" class="link-email">email</a>
+   <a href="https://github.com/wendelmarques" target="_blank" class="link-github">github</a>
+   <a href="https://www.linkedin.com/in/wendelmarques/" target="_blank" class="link-linkedin">linkedin</a>
+   <a href="https://lattes.cnpq.br/6404122317003520" target="_blank" class="link-lattes">lattes</a>
+  </div>
+ </div>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const items = document.querySelectorAll('.acc-item');
+    const previewImg = document.getElementById('acc-preview-img');
+    const previewVideo = document.getElementById('acc-preview-video');
+    
+    if (items.length > 0 && previewImg) {
+      items.forEach(item => {
+        item.querySelector('.acc-header').addEventListener('click', () => {
+          const isActive = item.classList.contains('active');
+          items.forEach(i => i.classList.remove('active'));
+          
+          if (!isActive) {
+            item.classList.add('active');
+
+            const videoId = item.dataset.video;
+
+            if (videoId && previewVideo) {
+              // Item tem vídeo: mostra o iframe, esconde a imagem
+              previewImg.style.display = 'none';
+              previewVideo.src = `https://www.youtube.com/embed/${videoId}`;
+              previewVideo.style.display = 'block';
+            } else {
+              // Item só tem foto: comportamento original
+              if (previewVideo) {
+                previewVideo.style.display = 'none';
+                previewVideo.src = '';
+              }
+              previewImg.style.display = 'block';
+              previewImg.style.opacity = 0;
+              setTimeout(() => {
+                previewImg.src = item.dataset.image;
+                previewImg.style.opacity = 1;
+              }, 250);
+            }
+          }
+        });
+      });
+    }
+  });
+</script>
+<script src="i18n.js"></script>
+<script src="stars.js"></script>
+</body>
+</html>

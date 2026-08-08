@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog • Wendel Marques</title>
+  <meta name="description" content="Artigos, reflexões e tutoriais sobre Engenharia de Machine Learning, Inteligência Artificial e Ciência de Dados por Wendel Marques.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- NAVIGATION BAR -->
+  <nav>
+    <div class="inner">
+      <a class="brand" href="index.html">// wwwendel</a>
+      <div class="navlinks" style="display: flex; align-items: center; gap: 18px;">
+        <a href="index.html#experiencia" data-i18n="nav.experience">experiência</a>
+        <a href="index.html#contribuicoes" data-i18n="nav.research">pesquisa</a>
+        <a href="index.html#voluntariado" data-i18n="nav.volunteering">voluntariado</a>
+        <a href="index.html#projetos" data-i18n="nav.projects">projetos</a>
+        <!-- <a href="index.html#competicoes" data-i18n="nav.hackathons">hackathons</a> -->
+        <a href="blog.html" class="active" data-i18n="nav.blog">blog</a>
+        
+        <!-- Language Selector Dropdown -->
+        <div class="lang-selector-wrapper">
+          <button class="lang-selector-btn" id="lang-btn" aria-label="Selecione o idioma">
+            <svg class="lang-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m5 8 6 6"/>
+              <path d="m4 14 6-6 2-3"/>
+              <path d="M2 5h12"/>
+              <path d="M7 2h1"/>
+              <path d="m22 22-5-10-5 10"/>
+              <path d="M14 18h6"/>
+            </svg>
+            <svg class="lang-arrow" width="10" height="10" viewBox="0 0 12 12" fill="currentColor">
+              <path d="M2.5 4.5L6 8L9.5 4.5H2.5Z"/>
+            </svg>
+          </button>
+          <div class="lang-dropdown" id="lang-menu">
+            <button class="lang-option active" data-lang="pt">
+              <span class="lang-code">BR</span> Português (Brasil)
+            </button>
+            <button class="lang-option" data-lang="en">
+              <span class="lang-code">US</span> English
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- BLOG HERO HEADER -->
+  <header class="page-head">
+    <div class="wrap">
+      <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+        <span style="font-family: 'Consolas', monospace; font-size: 13px; color: #f9594a; text-transform: lowercase;">// textos &amp; reflexões</span>
+      </div>
+      <h1 class="section-label" style="font-size: 32px !important; font-weight: 700 !important; color: #171717 !important; margin: 0 0 12px 0; text-transform: lowercase !important;">blog</h1>
+      <p style="font-family: 'Inter', sans-serif; font-size: 16px; color: #a1a1a1; line-height: 24px; max-width: 620px; margin: 0;">
+        Artigos sobre engenharia de machine learning, inteligência artificial aplicada, modelos de linguagem e vivências em comunidades de tecnologia.
+      </p>
+    </div>
+  </header>
+
+  <!-- MAIN BLOG ARTICLES SECTION -->
+  <main class="gh-section" style="padding-top: 32px; padding-bottom: 60px;">
+    <div class="wrap">
+      
+      <!-- Article List Container -->
+      <div class="blog-list" style="display: flex; flex-direction: column; gap: 32px;">
+        
+        <!-- Post 1 -->
+        <!-- <article class="blog-item" style="padding-bottom: 28px; border-bottom: 1px solid var(--line);">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; margin-bottom: 8px;">
+            <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+              <span style="font-family: 'Consolas', monospace; font-size: 12px; color: var(--muted);">18 de fev, 2026</span>
+              <span style="font-family: 'Consolas', monospace; font-size: 10px; padding: 2px 8px; border-radius: 4px; background: rgba(249, 89, 74, 0.1); color: #f9594a; font-weight: 600;">LLMs &amp; RAG</span>
+            </div>
+            <span style="font-family: 'Consolas', monospace; font-size: 12px; color: var(--muted);">6 min de leitura</span>
+          </div>
+
+          <h2 style="margin: 4px 0 10px 0;">
+            <a href="post.html?id=rag-pipelines" class="custom-link" style="font-family: 'Inter', sans-serif; font-size: 20px; font-weight: 600; color: #171717; text-decoration: none;">
+              <span class="link-text">Como estruturar pipelines de RAG escaláveis com busca vetorial e reranking</span>
+              <svg class="link-arrow" width="18" height="18" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4.5 11.5L11.5 4.5M11.5 4.5H5.5M11.5 4.5V10.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </h2>
+
+          <p class="gh-feature-text" style="font-family: 'Inter', sans-serif; font-size: 15px; color: #a1a1a1; line-height: 24px; margin: 0;">
+            Uma análise técnica sobre as melhores práticas para integrar embeddings, bancos de dados vetoriais (Qdrant/Chroma) e modelos de reranking para diminuir alucinações e aumentar a precisão de respostas contextuais.
+          </p>
+        </article> -->
+
+        <!-- Post 2 -->
+        <!-- <article class="blog-item" style="padding-bottom: 28px; border-bottom: 1px solid var(--line);">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; margin-bottom: 8px;">
+            <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+              <span style="font-family: 'Consolas', monospace; font-size: 12px; color: var(--muted);">10 de nov, 2025</span>
+              <span style="font-family: 'Consolas', monospace; font-size: 10px; padding: 2px 8px; border-radius: 4px; background: rgba(47, 129, 247, 0.1); color: #2f81f7; font-weight: 600;">Engenharia de ML</span>
+            </div>
+            <span style="font-family: 'Consolas', monospace; font-size: 12px; color: var(--muted);">8 min de leitura</span>
+          </div>
+
+          <h2 style="margin: 4px 0 10px 0;">
+            <a href="post.html?id=mlops-iniciantes" class="custom-link" style="font-family: 'Inter', sans-serif; font-size: 20px; font-weight: 600; color: #171717; text-decoration: none;">
+              <span class="link-text">Do Notebook à Produção: MLOps descomplicado para estudantes e iniciantes</span>
+              <svg class="link-arrow" width="18" height="18" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4.5 11.5L11.5 4.5M11.5 4.5H5.5M11.5 4.5V10.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </h2>
+
+          <p class="gh-feature-text" style="font-family: 'Inter', sans-serif; font-size: 15px; color: #a1a1a1; line-height: 24px; margin: 0;">
+            Passo a passo prático para transformar scripts isolados do Jupyter em APIs performáticas, containerizadas com Docker e prontas para servir inferências em tempo real.
+          </p>
+        </article> -->
+
+        <!-- Post 3 -->
+        <!-- <article class="blog-item" style="padding-bottom: 28px; border-bottom: 1px solid var(--line);">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; margin-bottom: 8px;">
+            <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+              <span style="font-family: 'Consolas', monospace; font-size: 12px; color: var(--muted);">22 de mai, 2024</span>
+              <span style="font-family: 'Consolas', monospace; font-size: 10px; padding: 2px 8px; border-radius: 4px; background: rgba(46, 160, 67, 0.1); color: #2ea043; font-weight: 600;">Comunidade &amp; Impacto</span>
+            </div>
+            <span style="font-family: 'Consolas', monospace; font-size: 12px; color: var(--muted);">5 min de leitura</span>
+          </div>
+
+          <h2 style="margin: 4px 0 10px 0;">
+            <a href="post.html?id=comunidades-tecnologia" class="custom-link" style="font-family: 'Inter', sans-serif; font-size: 20px; font-weight: 600; color: #171717; text-decoration: none;">
+              <span class="link-text">O poder das comunidades locais no desenvolvimento de lideranças técnicas</span>
+              <svg class="link-arrow" width="18" height="18" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4.5 11.5L11.5 4.5M11.5 4.5H5.5M11.5 4.5V10.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </h2>
+
+          <p class="gh-feature-text" style="font-family: 'Inter', sans-serif; font-size: 15px; color: #a1a1a1; line-height: 24px; margin: 0;">
+            Reflexões sobre a jornada na organização voluntária do GDG Goiânia, WTM e Google DSC UFG, e como o voluntariado em tecnologia acelera o aprendizado coletivo.
+          </p>
+        </article> -->
+
+        <!-- Post 4 -->
+        <!-- <article class="blog-item" style="padding-bottom: 12px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; margin-bottom: 8px;">
+            <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+              <span style="font-family: 'Consolas', monospace; font-size: 12px; color: var(--muted);">14 de ago, 2023</span>
+              <span style="font-family: 'Consolas', monospace; font-size: 10px; padding: 2px 8px; border-radius: 4px; background: rgba(238, 88, 67, 0.1); color: #ee5843; font-weight: 600;">Data Science</span>
+            </div>
+            <span style="font-family: 'Consolas', monospace; font-size: 12px; color: var(--muted);">7 min de leitura</span>
+          </div>
+
+          <h2 style="margin: 4px 0 10px 0;">
+            <a href="post.html?id=mapeamento-enem" class="custom-link" style="font-family: 'Inter', sans-serif; font-size: 20px; font-weight: 600; color: #171717; text-decoration: none;">
+              <span class="link-text">Mapeamento de médias do ENEM por estado com Folium e Python</span>
+              <svg class="link-arrow" width="18" height="18" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4.5 11.5L11.5 4.5M11.5 4.5H5.5M11.5 4.5V10.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </h2>
+
+          <p class="gh-feature-text" style="font-family: 'Inter', sans-serif; font-size: 15px; color: #a1a1a1; line-height: 24px; margin: 0;">
+            Tutorial de manipulação de dados públicos do INEP e visualização geoespacial com a biblioteca Folium, aplicando limites estaduais e agrupamentos regionais.
+          </p>
+        </article> -->
+
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="striped-divider"></div>
+    <div class="inner">
+      <div style="display: flex; flex-direction: column; gap: 4px;">
+        <span data-i18n="footer.location">wwwendel marques • baseado no brasil<span class="cursor-blink"></span></span>
+        <span style="font-size: 11px; opacity: 0.65;"><span data-i18n="footer.inspired">inspirado em</span> <a href="https://brianlovin.com/" target="_blank" style="color: inherit; text-decoration: underline;">brianlovin</a>, <a href="https://huyenchip.com/" target="_blank" style="color: inherit; text-decoration: underline;">huyenchip</a> &amp; <a href="https://weslley.io/" target="_blank" style="color: inherit; text-decoration: underline;">wellwelwel</a></span>
+      </div>
+      <div class="linkrow footer-links">
+        <a href="mailto:wendelmjs@proton.me" class="link-email">email</a>
+        <a href="https://github.com/wendelmarques" target="_blank" class="link-github">github</a>
+        <a href="https://www.linkedin.com/in/wendelmarques/" target="_blank" class="link-linkedin">linkedin</a>
+        <a href="https://lattes.cnpq.br/6404122317003520" target="_blank" class="link-lattes">lattes</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="i18n.js"></script>
+</body>
+</html>

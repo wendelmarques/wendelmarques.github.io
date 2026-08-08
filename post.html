@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artigo • Wendel Marques</title>
+  <meta name="description" content="Leitura de artigo técnico no blog de Wendel Marques.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .article-container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 40px 20px 80px 20px;
+    }
+    .article-header {
+      margin-bottom: 32px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--line);
+    }
+    .article-title {
+      font-family: 'Inter', sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: #171717;
+      line-height: 1.3;
+      margin: 16px 0;
+      letter-spacing: -0.02em;
+    }
+    .article-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      font-family: 'Consolas', monospace;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .article-body {
+      font-family: 'Inter', sans-serif;
+      font-size: 17px;
+      line-height: 1.8;
+      color: #2b2b2b;
+    }
+    .article-body h2 {
+      font-size: 22px;
+      font-weight: 600;
+      color: #171717;
+      margin: 40px 0 16px 0;
+      letter-spacing: -0.015em;
+    }
+    .article-body h3 {
+      font-size: 18px;
+      font-weight: 600;
+      color: #171717;
+      margin: 28px 0 12px 0;
+    }
+    .article-body p {
+      margin-bottom: 20px;
+    }
+    .article-body code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 14px;
+      background: rgba(0,0,0,0.05);
+      padding: 2px 6px;
+      border-radius: 4px;
+      color: #d73a49;
+    }
+    .article-body pre {
+      background: #1e1e1e;
+      color: #d4d4d4;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 24px 0;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13.5px;
+      line-height: 1.6;
+    }
+    .article-body pre code {
+      background: none;
+      padding: 0;
+      color: inherit;
+    }
+    .article-body blockquote {
+      border-left: 3px solid #f9594a;
+      margin: 24px 0;
+      padding: 14px 20px;
+      background: rgba(249, 89, 74, 0.04);
+      font-style: italic;
+      color: #525252;
+      border-radius: 0 8px 8px 0;
+    }
+    .code-title {
+      font-family: 'Consolas', monospace;
+      font-size: 12px;
+      color: var(--muted);
+      background: #252526;
+      padding: 6px 16px;
+      border-radius: 8px 8px 0 0;
+      margin-bottom: -24px;
+      border-bottom: 1px solid #333;
+      display: inline-block;
+    }
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'Consolas', monospace;
+      font-size: 13px;
+      color: #f9594a;
+      text-decoration: none;
+      margin-bottom: 24px;
+      transition: opacity 0.2s;
+    }
+    .back-btn:hover {
+      opacity: 0.8;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION BAR -->
+  <nav>
+    <div class="inner">
+      <a class="brand" href="index.html">// wwwendel</a>
+      <div class="navlinks" style="display: flex; align-items: center; gap: 18px;">
+        <a href="index.html#experiencia" data-i18n="nav.experience">experiência</a>
+        <a href="index.html#contribuicoes" data-i18n="nav.research">pesquisa</a>
+        <a href="index.html#voluntariado" data-i18n="nav.volunteering">voluntariado</a>
+        <a href="index.html#projetos" data-i18n="nav.projects">projetos</a>
+        <a href="index.html#competicoes" data-i18n="nav.hackathons">hackathons</a>
+        <a href="blog.html" class="active" data-i18n="nav.blog">blog</a>
+        
+        <!-- Language Selector Dropdown -->
+        <div class="lang-selector-wrapper">
+          <button class="lang-selector-btn" id="lang-btn" aria-label="Selecione o idioma">
+            <svg class="lang-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m5 8 6 6"/>
+              <path d="m4 14 6-6 2-3"/>
+              <path d="M2 5h12"/>
+              <path d="M7 2h1"/>
+              <path d="m22 22-5-10-5 10"/>
+              <path d="M14 18h6"/>
+            </svg>
+            <svg class="lang-arrow" width="10" height="10" viewBox="0 0 12 12" fill="currentColor">
+              <path d="M2.5 4.5L6 8L9.5 4.5H2.5Z"/>
+            </svg>
+          </button>
+          <div class="lang-dropdown" id="lang-menu">
+            <button class="lang-option active" data-lang="pt">
+              <span class="lang-code">BR</span> Português (Brasil)
+            </button>
+            <button class="lang-option" data-lang="en">
+              <span class="lang-code">US</span> English
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ARTICLE CONTAINER -->
+  <main class="article-container">
+    <a href="blog.html" class="back-btn">← voltar para o blog</a>
+    <article id="post-content"></article>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="striped-divider"></div>
+    <div class="inner">
+      <div style="display: flex; flex-direction: column; gap: 4px;">
+        <span data-i18n="footer.location">wwwendel marques • baseado no brasil<span class="cursor-blink"></span></span>
+        <span style="font-size: 11px; opacity: 0.65;"><span data-i18n="footer.inspired">inspirado em</span> <a href="https://brianlovin.com/" target="_blank" style="color: inherit; text-decoration: underline;">brianlovin</a>, <a href="https://huyenchip.com/" target="_blank" style="color: inherit; text-decoration: underline;">huyenchip</a> &amp; <a href="https://weslley.io/" target="_blank" style="color: inherit; text-decoration: underline;">wellwelwel</a></span>
+      </div>
+      <div class="linkrow footer-links">
+        <a href="mailto:wendelmjs@proton.me" class="link-email">email</a>
+        <a href="https://github.com/wendelmarques" target="_blank" class="link-github">github</a>
+        <a href="https://www.linkedin.com/in/wendelmarques/" target="_blank" class="link-linkedin">linkedin</a>
+        <a href="https://lattes.cnpq.br/6404122317003520" target="_blank" class="link-lattes">lattes</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const postsData = {
+      'rag-pipelines': {
+        title: "Como estruturar pipelines de RAG escaláveis com busca vetorial e reranking",
+        date: "18 de fevereiro, 2026",
+        tag: "LLMs & RAG",
+        tagBg: "rgba(249, 89, 74, 0.1)",
+        tagColor: "#f9594a",
+        readTime: "6 min de leitura",
+        content: `
+          <p>Sistemas de Geração Aumentada por Recuperação (RAG - Retrieval-Augmented Generation) tornaram-se a espinha dorsal para conectar modelos de linguagem a documentos corporativos sem custos extras de fine-tuning.</p>
+          
+          <p>Neste artigo, veremos um exemplo completo de código usando <strong>LangChain</strong>, <strong>Qdrant</strong> e um modelo de <strong>Cross-Encoder Reranker</strong> da HuggingFace.</p>
+
+          <h2>Exemplo Prático 1: Splitter Semântico & Embeddings</h2>
+          <p>Primeiro, configuramos a divisão inteligente do documento e a geração de vetores densos:</p>
+
+<pre><code># rag_pipeline.py
+from langchain_community.document_loaders import PyPDFLoader
+from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_community.vectorstores import Qdrant
+
+# 1. Carregar documento
+loader = PyPDFLoader("manual_tecnico.pdf")
+documents = loader.load()
+
+# 2. Fragmentação com sobreposição
+text_splitter = RecursiveCharacterTextSplitter(
+    chunk_size=500,
+    chunk_overlap=100,
+    separators=["\\n\\n", "\\n", " ", ""]
+)
+chunks = text_splitter.split_documents(documents)
+
+# 3. Embeddings usando modelo em português / multilíngue
+embeddings = HuggingFaceEmbeddings(
+    model_name="sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+)
+
+# 4. Indexação no Qdrant Vector Store
+vectordb = Qdrant.from_documents(
+    chunks,
+    embeddings,
+    location=":memory:",
+    collection_name="conhecimento_tecnico"
+)</code></pre>
+
+          <h2>Exemplo Prático 2: Re-ordenação com Cross-Encoder (Reranking)</h2>
+          <p>Após recuperar os 20 fragmentos mais similares, usamos um <code>CrossEncoder</code> para reordenar por relevância antes de enviar o contexto ao LLM:</p>
+
+<pre><code>from sentence_transformers import CrossEncoder
+
+# Carrega modelo de reranking especializado
+reranker = CrossEncoder('BAAI/bge-reranker-large')
+
+def retrieve_and_rerank(query, top_k_retrieval=20, top_k_final=3):
+    # 1. First-Stage Retrieval (Vector Search)
+    docs = vectordb.similarity_search(query, k=top_k_retrieval)
+    
+    # 2. Formatar pares (Query, Documento) para o Reranker
+    pairs = [[query, doc.page_content] for doc in docs]
+    
+    # 3. Calcular pontuação de relevância exata
+    scores = reranker.predict(pairs)
+    
+    # 4. Ordenar e selecionar os Top K mais relevantes
+    doc_score_pairs = sorted(zip(docs, scores), key=lambda x: x[1], reverse=True)
+    top_docs = [doc for doc, score in doc_score_pairs[:top_k_final]]
+    
+    return top_docs
+
+# Teste da busca aprimorada
+query = "Qual a tolerância máxima de temperatura do motor?"
+context_chunks = retrieve_and_rerank(query)
+for i, chunk in enumerate(context_chunks, 1):
+    print(f"--- Chunk {i} ---")
+    print(chunk.page_content[:150] + "...")</code></pre>
+
+          <blockquote>
+            "Com esse pipeline em duas etapas, a taxa de precisão nas respostas do LLM aumentou em mais de 35% nos testes comparativos."
+          </blockquote>
+        `
+      },
+
+      'mlops-iniciantes': {
+        title: "Do Notebook à Produção: MLOps descomplicado para estudantes e iniciantes",
+        date: "10 de novembro, 2025",
+        tag: "Engenharia de ML",
+        tagBg: "rgba(47, 129, 247, 0.1)",
+        tagColor: "#2f81f7",
+        readTime: "8 min de leitura",
+        content: `
+          <p>Aprenda a transformar um modelo treinado no Scikit-Learn ou PyTorch em uma API assíncrona com <strong>FastAPI</strong> e empacotada via <strong>Docker</strong>.</p>
+
+          <h2>Exemplo Prático 1: Servidor de Inferência com FastAPI</h2>
+          <p>Estruturamos a API com validação estrita dos dados de entrada usando <code>Pydantic</code>:</p>
+
+<pre><code># app/main.py
+from fastapi import FastAPI, HTTPException
+from pydantic import BaseModel
+import joblib
+import numpy as np
+
+app = FastAPI(title="ML Inference Service", version="1.0.0")
+
+# Carrega modelo e scaler salvos
+model = joblib.load("model.joblib")
+scaler = joblib.load("scaler.joblib")
+
+class PredictRequest(BaseModel):
+    idade: int
+    renda: float
+    score_credito: float
+
+class PredictResponse(BaseModel):
+    aprovado: bool
+    probabilidade: float
+
+@app.get("/health")
+def health_check():
+    return {"status": "healthy"}
+
+@app.post("/predict", response_model=PredictResponse)
+def predict(data: PredictRequest):
+    try:
+        features = np.array([[data.idade, data.renda, data.score_credito]])
+        scaled_features = scaler.transform(features)
+        
+        proba = float(model.predict_proba(scaled_features)[0][1])
+        prediction = proba >= 0.5
+        
+        return PredictResponse(aprovado=prediction, probabilidade=proba)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))</code></pre>
+
+          <h2>Exemplo Prático 2: Dockerfile & Containerização</h2>
+          <p>Em seguida, criamos a imagem Docker otimizada para implantação rápida:</p>
+
+<pre><code># Dockerfile
+FROM python:3.11-slim
+
+WORKDIR /app
+
+# Instala dependências
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copia código e artefatos do modelo
+COPY ./app ./app
+COPY model.joblib .
+COPY scaler.joblib .
+
+EXPOSE 8000
+
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]</code></pre>
+
+          <h2>Exemplo Prático 3: Testando a API via cURL</h2>
+<pre><code>curl -X POST "http://localhost:8000/predict" \\
+     -H "Content-Type: application/json" \\
+     -d '{"idade": 28, "renda": 5500.0, "score_credito": 720.0}'
+
+# Resposta JSON:
+# {"aprovado": true, "probabilidade": 0.89}</code></pre>
+        `
+      },
+
+      'comunidades-tecnologia': {
+        title: "O poder das comunidades locais no desenvolvimento de lideranças técnicas",
+        date: "22 de maio, 2024",
+        tag: "Comunidade & Impacto",
+        tagBg: "rgba(46, 160, 67, 0.1)",
+        tagColor: "#2ea043",
+        readTime: "5 min de leitura",
+        content: `
+          <p>Organizar comunidades voluntárias como o Google Developer Groups (GDG) e WTM exige método, escuta ativa e planejamento estruturado.</p>
+
+          <h2>Checklist de Organização de Eventos Comunitários</h2>
+          <p>Abaixo compartilhamos a matriz usada na preparação do <strong>DevFest Cerrado</strong> para garantir acessibilidade e alto nível técnico:</p>
+
+          <pre><code>📋 CHECKLIST DE EXECUÇÃO DE EVENTO COMUNITÁRIO
+────────────────────────────────────────────────────────────────
+[1] Curadoria de Conteúdo
+    ├── Call for Papers (CFP) aberto com grade de diversidade
+    ├── Trilhas: IA & Data Science, Web, Mobile, Carreira
+    └── Mentoria para palestrantes de primeira viagem
+
+[2] Logística e Inclusão
+    ├── Espaço infantil (Kids Room) para mães e pais
+    ├── Intérpretes de LIBRAS em palestras principais
+    └── Opções de credenciamento ágil com QR Code
+
+[3] Parcerias e Patrocínio
+    ├── Apresentação de impacto socioeducacional
+    └── Prestação de contas 100% transparente
+────────────────────────────────────────────────────────────────</code></pre>
+
+          <blockquote>
+            "O crescimento profissional acelera exponencialmente quando passamos a construir pontes para que outras pessoas também aprendam."
+          </blockquote>
+        `
+      },
+
+      'mapeamento-enem': {
+        title: "Mapeamento de médias do ENEM por estado com Folium e Python",
+        date: "14 de agosto, 2023",
+        tag: "Data Science",
+        tagBg: "rgba(238, 88, 67, 0.1)",
+        tagColor: "#ee5843",
+        readTime: "7 min de leitura",
+        content: `
+          <p>Confira o código-fonte completo para processar os dados do ENEM e gerar um mapa de coropletas interativo em HTML usando Python e Folium.</p>
+
+          <h2>Código Completo em Python</h2>
+
+<pre><code># processa_enem_mapa.py
+import pandas as pd
+import folium
+
+# 1. Carregamento dos dados com colunas selecionadas
+cols = ['SG_UF_PROVA', 'NU_NOTA_MT', 'NU_NOTA_CN', 'NU_NOTA_LC', 'NU_NOTA_CH', 'NU_NOTA_REDACAO']
+df = pd.read_csv('MICRODADOS_ENEM_2023.csv', sep=';', encoding='latin-1', usecols=cols)
+
+# 2. Tratamento de valores ausentes e cálculo da média geral
+df_clean = df.dropna()
+df_clean['MEDIA_GERAL'] = df_clean[['NU_NOTA_MT', 'NU_NOTA_CN', 'NU_NOTA_LC', 'NU_NOTA_CH', 'NU_NOTA_REDACAO']].mean(axis=1)
+
+# 3. Agrupamento por estado (UF)
+df_uf = df_clean.groupby('SG_UF_PROVA')['MEDIA_GERAL'].mean().reset_index()
+print(df_uf.head())
+
+# 4. Criação do mapa centralizado no Brasil
+mapa = folium.Map(location=[-14.2350, -51.9253], zoom_start=4, tiles='cartodbpositron')
+
+# 5. Adição da camada de coropleta (Choropleth)
+folium.Choropleth(
+    geo_data='br_states.json',
+    name='choropleth',
+    data=df_uf,
+    columns=['SG_UF_PROVA', 'MEDIA_GERAL'],
+    key_on='feature.id',
+    fill_color='YlOrRd',
+    fill_opacity=0.75,
+    line_opacity=0.3,
+    legend_name='Média Geral no ENEM por Estado (UF)'
+).add_to(mapa)
+
+# 6. Salva o arquivo HTML resultante
+mapa.save('mapa_enem_brasil.html')
+print("Mapa interativo gerado com sucesso: mapa_enem_brasil.html")</code></pre>
+        `
+      }
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      const postId = params.get('id') || 'rag-pipelines';
+      const post = postsData[postId] || postsData['rag-pipelines'];
+
+      const postContentEl = document.getElementById('post-content');
+      postContentEl.innerHTML = `
+        <header class="article-header">
+          <div class="article-meta">
+            <span>\${post.date}</span>
+            <span>•</span>
+            <span style="padding: 2px 8px; border-radius: 4px; background: \${post.tagBg}; color: \${post.tagColor}; font-weight: 600;">\${post.tag}</span>
+            <span>•</span>
+            <span>\${post.readTime}</span>
+          </div>
+          <h1 class="article-title">\${post.title}</h1>
+        </header>
+        <div class="article-body">
+          \${post.content}
+        </div>
+      `;
+    });
+  </script>
+  <script src="i18n.js"></script>
+</body>
+</html>
