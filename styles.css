@@ -220,12 +220,15 @@ a{color:inherit; text-decoration:none;}
 h1,h2,h3,.mono-display{font-family:'Inter', sans-serif; font-weight:800; letter-spacing:-0.02em;}
 
 /* NAV — floating glass bar */
+/* NAV — floating glass bar */
 nav{
-  position:relative !important; top:auto !important; z-index:50;
-  border-bottom:1px solid var(--line);
-  background:rgba(255, 255, 255, 0.95);
-  backdrop-filter:blur(18px) saturate(140%);
-  -webkit-backdrop-filter:blur(18px) saturate(140%);
+  position: sticky !important; /* Altera de relative/auto para sticky */
+  top: 0 !important;           /* Fixa no topo da viewport ao rolar */
+  z-index: 999999 !important;  /* Mantém sobreposto ao conteúdo */
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
 }
 nav .inner{
   max-width:var(--maxw); margin:0 auto; padding:16px 32px;
@@ -2822,19 +2825,7 @@ header.hero, .hero, section, .gh-section {
   vertical-align: -4px;
 }
 
-/* ============================================================
-   NAV — comportamento final (bloco único, sem duplicatas)
-   ============================================================ */
-
-/* 1. Nav NUNCA fica fixo/sticky no topo — rola normalmente com a
-      página em qualquer tamanho de tela. Se isso não estiver
-      funcionando no navegador, é cache: force Ctrl+F5 (ou
-      Cmd+Shift+R no Mac) depois de publicar. */
-nav {
-  position: relative !important;
-  top: auto !important;
-  bottom: auto !important;
-}
+ 
 
 /* 2. Em telas largas (desktop), o seletor de idioma fica colado na
       borda direita da TELA INTEIRA (viewport), não na borda do
