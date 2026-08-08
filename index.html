@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>wwwendel marques</title>
+<link rel="icon" type="image/x-icon" href="favicon.icon">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
@@ -47,7 +48,7 @@
   
   <!-- Language Selector Dropdown -->
   <div class="lang-selector-wrapper">
-    <button class="lang-selector-btn" id="lang-btn" aria-label="Selecione o idioma">
+    <button class="lang-selector-btn" id="lang-btn" aria-label="Selecione o idioma" data-i18n-attr="aria-label:lang.select">
       <svg class="lang-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
         <path d="m5 8 6 6"/>
         <path d="m4 14 6-6 2-3"/>
@@ -145,7 +146,7 @@
       <div class="minimal-row">
         <div class="minimal-left">
           <div class="minimal-icon"><img src="logos/logo_gdg.png" alt="gdg"></div>
-          <span class="minimal-title">gdg goiânia (voluntariado)</span>
+          <span class="minimal-title" data-i18n="exp.gdg.title">gdg goiânia (voluntariado)</span>
           <span class="minimal-role" data-i18n="exp.gdg.role">gerente de comunidade</span>
         </div>
         <div class="minimal-date">22-<span data-i18n="exp.date.present">atual</span></div>
@@ -255,9 +256,9 @@
           <div class="project-stack-group" style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-top: 16px;">
             <span class="stack-label" style="font-family: 'Consolas', monospace; font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600;">Stack:</span>
             <span class="tech-badge">Rivet</span>
-            <span class="tech-badge">Fluxos Agênticos</span>
+            <span class="tech-badge" data-i18n="proj.1.stack.agentic">Fluxos Agênticos</span>
             <span class="tech-badge">LLMs</span>
-            <span class="tech-badge">Extração de Dados</span>
+            <span class="tech-badge" data-i18n="proj.1.stack.extraction">Extração de Dados</span>
           </div>
         </div>
       </div>
@@ -307,7 +308,7 @@
 
       <div class="repo-card-body">
         <h3 class="repo-card-title">
-          <a href="https://github.com/wendelmarques/materiais-de-estudos-sobre-data-science-deep-machine-learning" target="_blank">
+          <a href="https://github.com/wendelmarques/materiais-de-estudos-sobre-data-science-deep-machine-learning" target="_blank" data-i18n="repo.title">
             materiais-de-estudos-sobre-data-science-deep-machine-learning
             <svg class="link-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M4.5 11.5L11.5 4.5M11.5 4.5H5.5M11.5 4.5V10.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -469,30 +470,30 @@
             <div class="contrib-list">
               <div class="contrib-row">
                 <span class="contrib-title">DevFest Cerrado 2026</span>
-                <span class="contrib-desc"><span style="color: #2ea043; display: inline-flex; align-items: center; gap: 6px; font-weight: 500; margin-left: 4px;"><span class="status-dot-green"></span>em andamento</span></span>
+                <span class="contrib-desc"><span style="color: #2ea043; display: inline-flex; align-items: center; gap: 6px; font-weight: 500; margin-left: 4px;"><span class="status-dot-green"></span><span data-i18n="vol.gdg.status.ongoing">em andamento</span></span></span>
               </div>
               <div class="contrib-row">
                 <span class="contrib-title">DevFest Cerrado 2025</span>
-                <span class="contrib-desc">Organizador. 350+ participantes, 35 palestrantes em 7 trilhas simultâneas, incluindo trilha de mentorias e espaços para criança.</span>
+                <span class="contrib-desc" data-i18n="vol.gdg.devfest2025.desc">Organizador. 350+ participantes, 35 palestrantes em 7 trilhas simultâneas, incluindo trilha de mentorias e espaços para criança.</span>
               </div>
                <div class="contrib-row">
                 <span class="contrib-title">Build With AI 2025</span>
-                <span class="contrib-desc">Organizador. evento mão na massa para aprendizado em ia generativa. participaram cerca de 30 pessoas.</span>
+                <span class="contrib-desc" data-i18n="vol.gdg.bwai2025.desc">Organizador. evento mão na massa para aprendizado em ia generativa. participaram cerca de 30 pessoas.</span>
               </div>
 
               <div class="contrib-row">
                 <span class="contrib-title">DevFest Cerrado 2024</span>
-                <span class="contrib-desc">Organizador. 800+ participantes, 39 palestrantes em seis trilhas simultâneas.</span>
+                <span class="contrib-desc" data-i18n="vol.gdg.devfest2024.desc">Organizador. 800+ participantes, 39 palestrantes em seis trilhas simultâneas.</span>
               </div>
 
               <div class="contrib-row">
                 <span class="contrib-title">Build With AI 2024</span>
-                <span class="contrib-desc">Organizador. evento mão na massa para aprendizado em ia generativa. participaram cerca de 25 pessoas.</span>
+                <span class="contrib-desc" data-i18n="vol.gdg.bwai2024.desc">Organizador. evento mão na massa para aprendizado em ia generativa. participaram cerca de 25 pessoas.</span>
               </div>
 
               <div class="contrib-row">
                 <span class="contrib-title">DevFest Cerrado 2023</span>
-                <span class="contrib-desc">Organizador. ~900 participantes, 40 palestras.</span>
+                <span class="contrib-desc" data-i18n="vol.gdg.devfest2023.desc">Organizador. ~900 participantes, 40 palestras.</span>
               </div>
               
               
@@ -510,15 +511,15 @@
             <div class="contrib-list">
               <div class="contrib-row">
                 <span class="contrib-title">International Women's Day Cerrado 2025 — #redefinepossible</span>
-                <span class="contrib-desc">Organizador. ~250 participantes, palco 100% feminino, 30+ atividades, ~20 voluntários.</span>
+                <span class="contrib-desc" data-i18n="vol.wtm.iwd2025.desc">Organizador. ~250 participantes, palco 100% feminino, 30+ atividades, ~20 voluntários.</span>
               </div>
               <div class="contrib-row">
                 <span class="contrib-title">IWD Cerrado 2024 — #impactthefuture</span>
-                <span class="contrib-desc">Organizador. 100% palestrantes mulheres, 250+ participantes, 20+ palestras.</span>
+                <span class="contrib-desc" data-i18n="vol.wtm.iwd2024.desc">Organizador. 100% palestrantes mulheres, 250+ participantes, 20+ palestras.</span>
               </div>
               <div class="contrib-row">
                 <span class="contrib-title">IWD Cerrado 2023 — #daretobe</span>
-                <span class="contrib-desc">Organizador. 100% palestrantes mulheres, 400+ participantes, 20+ palestras.</span>
+                <span class="contrib-desc" data-i18n="vol.wtm.iwd2023.desc">Organizador. 100% palestrantes mulheres, 400+ participantes, 20+ palestras.</span>
               </div>
             </div>
           </div>
@@ -533,20 +534,20 @@
           <div class="acc-body">
             <div class="contrib-list">
               <div class="contrib-row">
-                <span class="contrib-title">Lead, Co-fundador e Organizador</span>
-                <span class="contrib-desc">Gestão da comunidade, organização de eventos e projetos de impacto social.</span>
+                <span class="contrib-title" data-i18n="vol.gdsc.lead.title">Lead, Co-fundador e Organizador</span>
+                <span class="contrib-desc" data-i18n="vol.gdsc.lead.desc">Gestão da comunidade, organização de eventos e projetos de impacto social.</span>
               </div><div class="contrib-row">
-                <span class="contrib-title">Atividades de letramento em computação em escolas municipais</span>
-                <span class="contrib-desc">Organizador • apresentamos conteúdos sobre visão computacional e machine learning</span>
+                <span class="contrib-title" data-i18n="vol.gdsc.literacy.title">Atividades de letramento em computação em escolas municipais</span>
+                <span class="contrib-desc" data-i18n="vol.gdsc.literacy.desc">Organizador • apresentamos conteúdos sobre visão computacional e machine learning</span>
               </div>
               
               <div class="contrib-row">
-                <span class="contrib-title">Mulheres in Tech: mulheres negras na tecnologia (2022)</span> 
+                <span class="contrib-title" data-i18n="vol.gdsc.mit_black.title">Mulheres in Tech: mulheres negras na tecnologia (2022)</span> 
                 
 
                   
 
-<span class="contrib-desc">Organizador • <a href="https://www.youtube.com/live/vJtCmHxU7t4?si=rXRASFPpRwvPhyWm&t=5371" target="_blank" class="doi-link" style="color: #f9594a; text-decoration: underline;">live nos canais da ufg e inf
+<span class="contrib-desc" data-i18n="vol.gdsc.mit_black.desc" data-i18n-html="true">Organizador • <a href="https://www.youtube.com/live/vJtCmHxU7t4?si=rXRASFPpRwvPhyWm&t=5371" target="_blank" class="doi-link" style="color: #f9594a; text-decoration: underline;">live nos canais da ufg e inf
 <svg class="link-arrow" width="12" height="12" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path d="M4.5 11.5L11.5 4.5M11.5 4.5H5.5M11.5 4.5V10.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
   </svg>
@@ -570,8 +571,8 @@
 
 
               <div class="contrib-row">
-                <span class="contrib-title">Mulheres In Tech - Presencial(2022)</span>
-                <span class="contrib-desc">Organizador • primiero evento como líder de comunidade, foram cerca de 20 palestras ministradas por mulheres </span>
+                <span class="contrib-title" data-i18n="vol.gdsc.mit_presencial.title">Mulheres In Tech - Presencial(2022)</span>
+                <span class="contrib-desc" data-i18n="vol.gdsc.mit_presencial.desc">Organizador • primiero evento como líder de comunidade, foram cerca de 20 palestras ministradas por mulheres </span>
               </div>
             </div>
           </div>
@@ -588,25 +589,25 @@
               <div class="contrib-row">
                 <!-- <span class="contrib-meta">Sociedade Brasileira de Computação / UFG</span> -->
                 <span class="contrib-title">24º Simpósio Brasileiro de Computação Aplicada à Saúde (SBCAS)</span>
-                <span class="contrib-desc">Membro do comitê organizador.</span>
+                <span class="contrib-desc" data-i18n="vol.sbc.sbcas.desc">Membro do comitê organizador.</span>
               </div>
 
                <div class="contrib-row">
                 <!-- <span class="contrib-meta">Instituto de Informática — UFG</span> -->
                 <span class="contrib-title">workshop adas - inf/ufg</span>
-                <span class="contrib-desc">fotógrafo • evento de tecnologia com palestrantes mulheres  </span>
+                <span class="contrib-desc" data-i18n="vol.sbc.adas.desc">fotógrafo • evento de tecnologia com palestrantes mulheres  </span>
               </div>
 
               <div class="contrib-row">
                 <!-- <span class="contrib-meta">Instituto de Informática — UFG</span> -->
                 <span class="contrib-title">Semana de Integração - inf/ufg</span>
-                <span class="contrib-desc">apoio • evento de recepção de calouros(as) dos cursos de tecnologia do inf/ufg</span>
+                <span class="contrib-desc" data-i18n="vol.sbc.semana.desc">apoio • evento de recepção de calouros(as) dos cursos de tecnologia do inf/ufg</span>
               </div>
               
 
               <div class="contrib-row">
                 <span class="contrib-title">Escola Regional de Alto Desempenho do Centro-Oeste 2018</span>
-                <span class="contrib-desc">apoio em salas.</span>
+                <span class="contrib-desc" data-i18n="vol.sbc.erad.desc">apoio em salas.</span>
               </div>
             </div>
           </div>
@@ -619,7 +620,7 @@
         <!-- Accordion Item 5 -->
         <div class="acc-item" data-image="images/slides/Vestgeek.png">
           <div class="acc-header">
-            <h3>Outras iniciativas</h3>
+            <h3 data-i18n="vol.other.title">Outras iniciativas</h3>
             <span class="acc-icon">+</span>
           </div>
           <div class="acc-body">
@@ -627,7 +628,7 @@
               
                <div class="contrib-row">
                 <span class="contrib-title">Vestgeek</span>
-                <span class="contrib-desc">Idealizador e criador de conteúdo (2015–2022). Projeto voluntário de apoio a vestibulandos, com mais de 3 milhões de visualizações e 80 mil seguidores nas redes sociais.</span>
+                <span class="contrib-desc" data-i18n="vol.other.vestgeek.desc">Idealizador e criador de conteúdo (2015–2022). Projeto voluntário de apoio a vestibulandos, com mais de 3 milhões de visualizações e 80 mil seguidores nas redes sociais.</span>
               </div>
             </div>
           </div>
@@ -636,14 +637,14 @@
                 <!-- Accordion Item 6 -->
         <div class="acc-item" data-image="images/slides/cajueiro.jpg">
           <div class="acc-header">
-            <h3>palestras</h3>
+            <h3 data-i18n="vol.talks.title">palestras</h3>
             <span class="acc-icon">+</span>
           </div>
           <div class="acc-body">
             <div class="contrib-list">
                <div class="contrib-row">
                 <span class="contrib-title">Cajueiro - Centro de Juventude</span>
-                <span class="contrib-desc">ministrei uma aula sobre inteligência artificial.</span>
+                <span class="contrib-desc" data-i18n="vol.talks.cajueiro.desc">ministrei uma aula sobre inteligência artificial.</span>
         </div>
             </div>
           </div>
@@ -653,8 +654,8 @@
 
       <!-- Right side: Image/Video preview -->
       <div class="accordion-preview">
-        <img id="acc-preview-img" src="images/slides/1.jpg" alt="Preview de Evento" onerror="this.src='https://placehold.co/800x600/170b2c/d7b8ff?text=Foto'">
-        <iframe id="acc-preview-video" src="" title="Preview de Evento" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: none;"></iframe>
+        <img id="acc-preview-img" src="images/slides/1.jpg" alt="Preview de Evento" data-i18n-attr="alt:vol.preview.alt" onerror="this.src='https://placehold.co/800x600/170b2c/d7b8ff?text=Foto'">
+        <iframe id="acc-preview-video" src="" title="Preview de Evento" data-i18n-attr="title:vol.preview.alt" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: none;"></iframe>
       </div>
     </div>
   </div>
@@ -676,7 +677,7 @@
             
             <span style="font-family: 'Consolas', monospace; font-size: 12px; padding: 2px 8px; border-radius: 4px; background: rgba(255, 255, 255, 0.06); color: var(--muted);">2025 - são paulo</span>
           </div>
-          <span style="font-family: 'Consolas', monospace; font-size: 12px; padding: 2px 8px; border-radius: 4px; background: #e6bdbb; color: #ff6159;">selecionado para imersão presencial de 1 semana</span><span class="contrib-desc" style="margin-top: 6px; display: block;">Envolveu o desenvolvimento solução com IA GEN, visão computacional, similaridade vetorial e RAG para construção de solução de impacto social.</span>
+          <span style="font-family: 'Consolas', monospace; font-size: 12px; padding: 2px 8px; border-radius: 4px; background: #e6bdbb; color: #ff6159;" data-i18n="comp.usp.badge">selecionado para imersão presencial de 1 semana</span><span class="contrib-desc" style="margin-top: 6px; display: block;" data-i18n="comp.usp.desc">Envolveu o desenvolvimento solução com IA GEN, visão computacional, similaridade vetorial e RAG para construção de solução de impacto social.</span>
         </div>
       </div>
 
@@ -688,7 +689,7 @@
             <span style="font-family: 'Inter', sans-serif; font-size: 17px; font-weight: 600; color: var(--text-bright);">Startup School - Link School of Business</span>
             <span style="font-family: 'Consolas', monospace; font-size: 12px; padding: 2px 8px; border-radius: 4px; background: rgba(255, 255, 255, 0.06); color: var(--muted);">2025 - são paulo</span>
           </div>
-          <span class="contrib-desc" style="margin-top: 6px; display: block;">Programa de 4 meses: desenvolvimento e validação prática de modelo de negócio com IA integrada.</span>
+          <span class="contrib-desc" style="margin-top: 6px; display: block;" data-i18n="comp.startupschool.desc">Programa de 4 meses: desenvolvimento e validação prática de modelo de negócio com IA integrada.</span>
         </div>
       </div>
 
@@ -707,7 +708,7 @@
             <span style="font-family: 'Inter', sans-serif; font-size: 17px; font-weight: 600; color: var(--text-bright);">Hackathon Zero to Hero - Link</span>
             <span style="font-family: 'Consolas', monospace; font-size: 12px; padding: 2px 8px; border-radius: 4px; background: rgba(255, 255, 255, 0.06); color: var(--muted);">2025 - são paulo</span>
           </div>
-          <span class="contrib-desc" style="margin-top: 6px; display: block;">Maratona de 3 dias: construção de um MVP funcional do zero, apresentado a uma banca de especialistas.</span>
+          <span class="contrib-desc" style="margin-top: 6px; display: block;" data-i18n="comp.zerotohero.desc">Maratona de 3 dias: construção de um MVP funcional do zero, apresentado a uma banca de especialistas.</span>
         </div>
       </div>
 
@@ -717,10 +718,10 @@
         <div class="minimal-icon" style="width: 32px; height: 32px; flex-shrink: 0; margin-top: 2px;"><img src="logos/logo_link.png" alt="Link School"></div>
         <div style="flex: 1;">
           <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
-            <span style="font-family: 'Inter', sans-serif; font-size: 17px; font-weight: 600; color: var(--text-bright);">AKCIT Camp — Desenvolvendo Agentes de IA</span>
+            <span style="font-family: 'Inter', sans-serif; font-size: 17px; font-weight: 600; color: var(--text-bright);" data-i18n="comp.akcitcamp.title">AKCIT Camp — Desenvolvendo Agentes de IA</span>
             <span style="font-family: 'Consolas', monospace; font-size: 12px; padding: 2px 8px; border-radius: 4px; background: rgba(255, 255, 255, 0.06); color: var(--muted);">2025 - goiânia</span>
           </div>
-          <span class="contrib-desc" style="margin-top: 6px; display: block;">Bootcamp de 4 semanas de orquestração multiagente (LangChain, CrewAI, LangGraph) com hackathon de 2 dias. Desenvolveu uma solução multiagêntica aplicada à educação.</span>
+          <span class="contrib-desc" style="margin-top: 6px; display: block;" data-i18n="comp.akcitcamp.desc">Bootcamp de 4 semanas de orquestração multiagente (LangChain, CrewAI, LangGraph) com hackathon de 2 dias. Desenvolveu uma solução multiagêntica aplicada à educação.</span>
         </div>
       </div>
 
@@ -732,10 +733,10 @@
         <div class="minimal-icon" style="width: 25px; height: 25px; flex-shrink: 0; margin-top: 2px;"><img src="logos/logo_goias.png" alt="Link School"></div>
         <div style="flex: 1;">
           <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
-            <span style="font-family: 'Inter', sans-serif; font-size: 17px; font-weight: 600; color: var(--text-bright);">Ideathon governo de Goiás — Autocuidado para 60+</span>
+            <span style="font-family: 'Inter', sans-serif; font-size: 17px; font-weight: 600; color: var(--text-bright);" data-i18n="comp.ideathon.title">Ideathon governo de Goiás — Autocuidado para 60+</span>
             <span style="font-family: 'Consolas', monospace; font-size: 12px; padding: 2px 8px; border-radius: 4px; background: rgba(255, 255, 255, 0.06); color: var(--muted);">2025 - são paulo</span>
           </div>
-          <span class="contrib-desc" style="margin-top: 6px; display: block;">
+          <span class="contrib-desc" style="margin-top: 6px; display: block;" data-i18n="comp.ideathon.desc">
             Maratona de ideias na Campus Party para desenvolvimento solução voltada às pessoas 60+. foram duas maratonas, em cada uma pessoa 60+ participou das equipes.
 
 </span>
@@ -757,7 +758,7 @@
             <span style="font-family: 'Inter', sans-serif; font-size: 17px; font-weight: 600; color: var(--text-bright);">NASA Space Apps Challenge/ Goiânia</span>
             <span style="font-family: 'Consolas', monospace; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: rgba(255, 255, 255, 0.06); color: var(--muted);">2024 - Goiânia</span>
           </div>
-          <span class="contrib-desc" style="margin-top: 6px; display: block;">maratona de 2 dias para desenvolvimento de solução de dados com bases abertas da NASA.</span>
+          <span class="contrib-desc" style="margin-top: 6px; display: block;" data-i18n="comp.nasa.desc">maratona de 2 dias para desenvolvimento de solução de dados com bases abertas da NASA.</span>
         </div>
       </div>
 
