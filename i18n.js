@@ -272,6 +272,21 @@ document.addEventListener('DOMContentLoaded', () => {
   const currentLang = localStorage.getItem('site_lang') || 'pt';
   setLanguage(currentLang);
 
+  // Check if navlinks requires horizontal scrolling on narrow screens
+  function checkNavOverflow() {
+    const navlinks = document.querySelector('.navlinks');
+    if (navlinks) {
+      if (navlinks.scrollWidth > navlinks.clientWidth) {
+        navlinks.classList.add('nav-scrolling-active');
+      } else {
+        navlinks.classList.remove('nav-scrolling-active');
+      }
+    }
+  }
+
+  checkNavOverflow();
+  window.addEventListener('resize', checkNavOverflow);
+
   // Setup event listeners for dropdown buttons with position: fixed viewport portal strategy
   const langBtn = document.getElementById('lang-btn');
   const langMenu = document.getElementById('lang-menu');

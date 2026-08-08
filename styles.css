@@ -2841,3 +2841,11 @@ header.hero, .hero, section, .gh-section {
     z-index: 1001 !important;
   }
 }
+
+/* Reduce menu font size to 80% when scrolling is required in maximum responsiveness */
+.navlinks.nav-scrolling-active a,
+@media (max-width: 480px) {
+  .navlinks a {
+    font-size: 12.8px !important; /* 80% of 16px */
+  }
+}
