@@ -36,7 +36,7 @@ const translations = {
     'btn.back_blog': '← voltar para o blog',
 
     // Experience Summary & Roles
-    'exp.summary.title': 'Machine Learning Engineer in Training | Computer Science <span style="white-space: nowrap; display: inline-flex; align-items: center; gap: 6px;">@ <span class="minimal-icon" style="width: 32px; height: 32px; display: inline-flex; vertical-align: middle;"><img src="logos/logo_ufg.png" alt="UFG"></span></span>',
+    'exp.summary.title': 'Machine Learning Engineer in Training | Computer Science @ ufg',
     'exp.summary.desc': 'Tenho vivência acadêmica e profissional em Ciência de Dados, Engenharia de Dados e Visão Computacional. Atualmente aprofundando conhecimentos em Engenharia de Machine Learning (MLE), com foco em desenvolvimento de modelos, fluxos agênticos e sistemas inteligentes.',
     'exp.date.present': 'atual',
     'exp.1.role': 'comunidade de startups',
@@ -187,7 +187,7 @@ const translations = {
     'exp.3.role': 'data science',
     'exp.4.role': 'computer vision r&d',
     // Experience Summary & Roles
-    'exp.summary.title': 'Machine Learning Engineer in Training | Computer Science <span style="white-space: nowrap; display: inline-flex; align-items: center; gap: 6px;">@ <span class="minimal-icon" style="width: 32px; height: 32px; display: inline-flex; vertical-align: middle;"><img src="logos/logo_ufg.png" alt="UFG"></span></span>',
+    'exp.summary.title': 'Machine Learning Engineer in Training | Computer Science @ ufg',
     'exp.summary.desc': 'I have academic and professional experience in Data Science, Data Engineering, and Computer Vision. Currently deepening expertise in Machine Learning Engineering (MLE), focusing on model development, agentic workflows, and intelligent systems.',
     'exp.5.role': 'data engineering',
     'exp.6.role': 'IT Support',
