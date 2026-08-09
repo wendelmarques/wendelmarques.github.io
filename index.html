@@ -87,7 +87,7 @@
   </div>
 </nav>
 
-<header class="hero" style="position: relative; text-align: center; padding-top: 80px; padding-bottom: 24px; overflow: hidden; background: #ffffff; color: #171717;">
+<header class="hero" style="position: relative; text-align: center; padding-top: 80px; padding-bottom: 40px; border-bottom: 1px solid var(--line); overflow: hidden; background: #ffffff; color: #171717;">
  <!-- Glow Backdrop -->
  <div class="home-glow-backdrop"></div>
  
@@ -386,7 +386,7 @@
       <!-- Item 1: Artigo -->
       <div class="contrib-row" style="padding: 8px 0 20px 0; border-bottom: 1px solid var(--line); margin-bottom: 24px;">
         <div style="display: flex; gap: 16px; align-items: flex-start;">
-          <div class="minimal-icon" style="margin-top: 2px;"><img src="logos/logo_ufg.png" alt="UFG"></div>
+          <div class="minimal-icon"><img src="logos/logo_ufg.png" alt="UFG"></div>
           <div style="flex: 1;">
             <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px;">
               <span class="contrib-title" style="font-weight: 600;"> <span style="font-family: 'Consolas', monospace; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: #e9e9e9; color: #080100;">ERI-GO (2021)</span> <span data-i18n="contrib.art1.title">Ontologia aplicada à redução de ruído em base de dados de tweets sobre mercado financeiro</span> </span>
@@ -416,7 +416,7 @@
         <!-- Item 2: Programa UFG -->
         <div class="contrib-row" style="padding: 8px 0; border-bottom: 1px solid var(--line);">
           <div style="display: flex; gap: 16px; align-items: flex-start;">
-            <div class="minimal-icon" style="margin-top: 2px;"><img src="logos/logo_ufg.png" alt="UFG"></div>
+            <div class="minimal-icon"><img src="logos/logo_ufg.png" alt="UFG"></div>
             <div style="flex: 1;">
               <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px;">
                 <span class="contrib-title" style="font-weight: 600;" data-i18n="contrib.p2.title">Programa de Iniciação à Pesquisa/UFG</span>
@@ -429,7 +429,7 @@
         <!-- Item 3: Programa CEIA -->
         <div class="contrib-row" style="padding: 8px 0;">
           <div style="display: flex; gap: 16px; align-items: flex-start;">
-            <div class="minimal-icon" style="margin-top: 2px;"><img src="logos/logo_ceia.png" alt="CEIA"></div>
+            <div class="minimal-icon"><img src="logos/logo_ceia.png" alt="CEIA"></div>
             <div style="flex: 1;">
               <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px;">
                 <span class="contrib-title" style="font-weight: 600;" data-i18n="contrib.p1.title">pd&amp;i - Centro de Excelência em ia/ufg</span>
@@ -452,7 +452,7 @@
     
     <!-- Item GDG Goiânia (Liderança de Comunidade - Card Voluntariado) -->
     <div class="vol-community-card" style="margin-top: 16px; margin-bottom: 24px; padding: 16px 20px; background: rgba(238, 88, 67, 0.025); border: 1px solid rgba(238, 88, 67, 0.15); border-radius: 12px; display: flex; gap: 14px; align-items: flex-start;">
-      <div class="minimal-icon" style="width: 36px; height: 36px; flex-shrink: 0; margin-top: 2px;"><img src="logos/logo_gdg.png" alt="gdg"></div>
+      <div class="minimal-icon"><img src="logos/logo_gdg.png" alt="gdg"></div>
       <div style="flex: 1;">
         <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
           <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
@@ -707,77 +707,92 @@
   <div class="wrap">
     <h2 class="section-label" data-i18n="sec.competitions">// COMPETIÇÕES &amp; HACKATHONS</h2>
     
-    <div class="comp-list" style="display: flex; flex-direction: column; gap: 16px; margin-top: 16px;">
+    <div style="display: flex; flex-direction: column; gap: 16px; margin-top: 16px;">
       
-      <!-- Comp 1 -->
-      <div class="comp-row" style="padding: 12px 0 16px 0; border-bottom: 1px solid var(--line); display: flex; gap: 16px; align-items: flex-start;">
-        <div class="minimal-icon" style="width: 32px; height: 32px; flex-shrink: 0; margin-top: 2px;"><img src="logos/logo_usp.png" alt="USP"></div>
-        <div style="flex: 1;">
-          <div class="comp-header-row" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
-            <span class="comp-title" style="font-family: 'Inter', sans-serif; font-size: 17px; font-weight: 600; color: var(--text-bright);">Campus Mobile - Claro/ USP</span>
-            <span class="comp-date badge-ano-local" style="font-family: 'Consolas', monospace; font-size: 12px; padding: 2px 8px; border-radius: 4px; background: rgba(255, 255, 255, 0.06); color: var(--muted);">2025 - são paulo</span>
+      <!-- Comp 1: USP -->
+      <div class="contrib-row" style="padding: 12px 0 16px 0; border-bottom: 1px solid var(--line);">
+        <div style="display: flex; gap: 16px; align-items: flex-start;">
+          <div class="minimal-icon"><img src="logos/logo_usp.png" alt="USP"></div>
+          <div style="flex: 1;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+              <span style="font-family: 'Inter', sans-serif; font-size: 16.5px; font-weight: 600; color: var(--text-bright);">Campus Mobile — Claro / USP</span>
+              <span class="comp-date badge-ano-local" style="font-family: 'Consolas', monospace; font-size: 11.5px; padding: 2px 8px; border-radius: 4px; background: rgba(0, 0, 0, 0.05); color: var(--muted);">2025 • São Paulo</span>
+            </div>
+            <div style="margin-top: 4px;">
+              <span class="comp-badge" style="font-family: 'Consolas', monospace; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: rgba(238, 88, 67, 0.08); color: #ee5843; border: 1px solid rgba(238, 88, 67, 0.2); font-weight: 600; display: inline-block;" data-i18n="comp.usp.badge">★ equipe selecionada p/ Imersão Presencial na USP (1 semana)</span>
+            </div>
+            <span class="contrib-desc" style="margin-top: 6px; display: block;" data-i18n="comp.usp.desc">Envolveu o desenvolvimento de solução com IA GEN, visão computacional, similaridade vetorial e RAG para construção de solução de impacto social.</span>
           </div>
-          <span class="comp-badge" style="font-family: 'Consolas', monospace; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: rgba(238, 88, 67, 0.08); color: #ee5843; border: 1px solid rgba(238, 88, 67, 0.2); font-weight: 600;" data-i18n="comp.usp.badge">selecionado para imersão presencial de 1 semana</span><span class="contrib-desc" style="margin-top: 6px; display: block;" data-i18n="comp.usp.desc">Envolveu o desenvolvimento solução com IA GEN, visão computacional, similaridade vetorial e RAG para construção de solução de impacto social.</span>
         </div>
       </div>
 
-      <!-- Comp 2 -->
-      <div class="comp-row" style="padding: 12px 0 16px 0; border-bottom: 1px solid var(--line); display: flex; gap: 16px; align-items: flex-start;">
-        <div class="minimal-icon" style="width: 32px; height: 32px; flex-shrink: 0; margin-top: 2px;"><img src="logos/logo_link.png" alt="Link School"></div>
-        <div style="flex: 1;">
-          <div class="comp-header-row" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
-            <span class="comp-title" style="font-family: 'Inter', sans-serif; font-size: 17px; font-weight: 600; color: var(--text-bright);">Startup School - Link School of Business</span>
-            <span class="comp-date badge-ano-local" style="font-family: 'Consolas', monospace; font-size: 12px; padding: 2px 8px; border-radius: 4px; background: rgba(255, 255, 255, 0.06); color: var(--muted);">2025 - são paulo</span>
+      <!-- Comp 2: Startup School Link -->
+      <div class="contrib-row" style="padding: 12px 0 16px 0; border-bottom: 1px solid var(--line);">
+        <div style="display: flex; gap: 16px; align-items: flex-start;">
+          <div class="minimal-icon"><img src="logos/logo_link.png" alt="Link School"></div>
+          <div style="flex: 1;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+              <span style="font-family: 'Inter', sans-serif; font-size: 16.5px; font-weight: 600; color: var(--text-bright);">Startup School — Link School of Business</span>
+              <span class="comp-date badge-ano-local" style="font-family: 'Consolas', monospace; font-size: 11.5px; padding: 2px 8px; border-radius: 4px; background: rgba(0, 0, 0, 0.05); color: var(--muted);">2025 • São Paulo</span>
+            </div>
+            <span class="contrib-desc" style="margin-top: 6px; display: block;" data-i18n="comp.startupschool.desc">Programa de 4 meses: desenvolvimento e validação prática de modelo de negócio com IA integrada.</span>
           </div>
-          <span class="contrib-desc" style="margin-top: 6px; display: block;" data-i18n="comp.startupschool.desc">Programa de 4 meses: desenvolvimento e validação prática de modelo de negócio com IA integrada.</span>
         </div>
       </div>
 
-      <!-- Comp 3 -->
-      <div class="comp-row" style="padding: 12px 0 16px 0; border-bottom: 1px solid var(--line); display: flex; gap: 16px; align-items: flex-start;">
-        <div class="minimal-icon" style="width: 32px; height: 32px; flex-shrink: 0; margin-top: 2px;"><img src="logos/logo_link.png" alt="Link School"></div>
-        <div style="flex: 1;">
-          <div class="comp-header-row" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
-            <span class="comp-title" style="font-family: 'Inter', sans-serif; font-size: 17px; font-weight: 600; color: var(--text-bright);">Hackathon Zero to Hero - Link</span>
-            <span class="comp-date badge-ano-local" style="font-family: 'Consolas', monospace; font-size: 12px; padding: 2px 8px; border-radius: 4px; background: rgba(255, 255, 255, 0.06); color: var(--muted);">2025 - são paulo</span>
+      <!-- Comp 3: Zero to Hero Link -->
+      <div class="contrib-row" style="padding: 12px 0 16px 0; border-bottom: 1px solid var(--line);">
+        <div style="display: flex; gap: 16px; align-items: flex-start;">
+          <div class="minimal-icon"><img src="logos/logo_link.png" alt="Link School"></div>
+          <div style="flex: 1;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+              <span style="font-family: 'Inter', sans-serif; font-size: 16.5px; font-weight: 600; color: var(--text-bright);">Hackathon Zero to Hero — Link</span>
+              <span class="comp-date badge-ano-local" style="font-family: 'Consolas', monospace; font-size: 11.5px; padding: 2px 8px; border-radius: 4px; background: rgba(0, 0, 0, 0.05); color: var(--muted);">2025 • São Paulo</span>
+            </div>
+            <span class="contrib-desc" style="margin-top: 6px; display: block;" data-i18n="comp.zerotohero.desc">Maratona de 3 dias: construção de um MVP funcional do zero, apresentado a uma banca de especialistas.</span>
           </div>
-          <span class="contrib-desc" style="margin-top: 6px; display: block;" data-i18n="comp.zerotohero.desc">Maratona de 3 dias: construção de um MVP funcional do zero, apresentado a uma banca de especialistas.</span>
         </div>
       </div>
 
-      <!-- Comp 4 -->
-      <div class="comp-row" style="padding: 12px 0 16px 0; border-bottom: 1px solid var(--line); display: flex; gap: 16px; align-items: flex-start;">
-        <div class="minimal-icon" style="width: 32px; height: 32px; flex-shrink: 0; margin-top: 2px;"><img src="logos/logo_link.png" alt="Link School"></div>
-        <div style="flex: 1;">
-          <div class="comp-header-row" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
-            <span class="comp-title" style="font-family: 'Inter', sans-serif; font-size: 17px; font-weight: 600; color: var(--text-bright);" data-i18n="comp.akcitcamp.title">AKCIT Camp — Desenvolvendo Agentes de IA</span>
-            <span class="comp-date badge-ano-local" style="font-family: 'Consolas', monospace; font-size: 12px; padding: 2px 8px; border-radius: 4px; background: rgba(255, 255, 255, 0.06); color: var(--muted);">2025 - goiânia</span>
+      <!-- Comp 4: AKCIT Camp -->
+      <div class="contrib-row" style="padding: 12px 0 16px 0; border-bottom: 1px solid var(--line);">
+        <div style="display: flex; gap: 16px; align-items: flex-start;">
+          <div class="minimal-icon"><img src="logos/logo_link.png" alt="Link School"></div>
+          <div style="flex: 1;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+              <span style="font-family: 'Inter', sans-serif; font-size: 16.5px; font-weight: 600; color: var(--text-bright);" data-i18n="comp.akcitcamp.title">AKCIT Camp — Desenvolvendo Agentes de IA</span>
+              <span class="comp-date badge-ano-local" style="font-family: 'Consolas', monospace; font-size: 11.5px; padding: 2px 8px; border-radius: 4px; background: rgba(0, 0, 0, 0.05); color: var(--muted);">2025 • Goiânia</span>
+            </div>
+            <span class="contrib-desc" style="margin-top: 6px; display: block;" data-i18n="comp.akcitcamp.desc">Bootcamp de 4 semanas de orquestração multiagente (LangChain, CrewAI, LangGraph) com hackathon de 2 dias. Desenvolveu uma solução multiagêntica aplicada à educação.</span>
           </div>
-          <span class="contrib-desc" style="margin-top: 6px; display: block;" data-i18n="comp.akcitcamp.desc">Bootcamp de 4 semanas de orquestração multiagente (LangChain, CrewAI, LangGraph) com hackathon de 2 dias. Desenvolveu uma solução multiagêntica aplicada à educação.</span>
         </div>
       </div>
 
-      <!-- Comp 5 -->
-      <div class="comp-row" style="padding: 12px 0 16px 0; border-bottom: 1px solid var(--line); display: flex; gap: 16px; align-items: flex-start;">
-        <div class="minimal-icon" style="width: 32px; height: 32px; flex-shrink: 0; margin-top: 2px;"><img src="logos/logo_goias.png" alt="Governo de Goiás"></div>
-        <div style="flex: 1;">
-          <div class="comp-header-row" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
-            <span class="comp-title" style="font-family: 'Inter', sans-serif; font-size: 17px; font-weight: 600; color: var(--text-bright);" data-i18n="comp.ideathon.title">Ideathon governo de Goiás — Autocuidado para 60+</span>
-            <span class="comp-date badge-ano-local" style="font-family: 'Consolas', monospace; font-size: 12px; padding: 2px 8px; border-radius: 4px; background: rgba(255, 255, 255, 0.06); color: var(--muted);">2025 - são paulo</span>
+      <!-- Comp 5: Ideathon Goiás -->
+      <div class="contrib-row" style="padding: 12px 0 16px 0; border-bottom: 1px solid var(--line);">
+        <div style="display: flex; gap: 16px; align-items: flex-start;">
+          <div class="minimal-icon"><img src="logos/logo_goias.png" alt="Governo de Goiás"></div>
+          <div style="flex: 1;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+              <span style="font-family: 'Inter', sans-serif; font-size: 16.5px; font-weight: 600; color: var(--text-bright);" data-i18n="comp.ideathon.title">Ideathon Governo de Goiás — Autocuidado para 60+</span>
+              <span class="comp-date badge-ano-local" style="font-family: 'Consolas', monospace; font-size: 11.5px; padding: 2px 8px; border-radius: 4px; background: rgba(0, 0, 0, 0.05); color: var(--muted);">2025 • São Paulo</span>
+            </div>
+            <span class="contrib-desc" style="margin-top: 6px; display: block;" data-i18n="comp.ideathon.desc">Maratona de ideias na Campus Party para desenvolvimento de solução voltada às pessoas 60+. Foram duas maratonas, em cada uma pessoas 60+ participaram das equipes.</span>
           </div>
-          <span class="contrib-desc" style="margin-top: 6px; display: block;" data-i18n="comp.ideathon.desc">Maratona de ideias na Campus Party para desenvolvimento solução voltada às pessoas 60+. foram duas maratonas, em cada uma pessoa 60+ participou das equipes.</span>
         </div>
       </div>
 
-      <!-- Comp 6 -->
-      <div class="comp-row" style="padding: 12px 0; display: flex; gap: 16px; align-items: flex-start;">
-        <div class="minimal-icon" style="width: 32px; height: 32px; flex-shrink: 0; margin-top: 2px;"><img src="logos/logo_nasa.webp" alt="NASA"></div>
-        <div style="flex: 1;">
-          <div class="comp-header-row" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
-            <span class="comp-title" style="font-family: 'Inter', sans-serif; font-size: 17px; font-weight: 600; color: var(--text-bright);">NASA Space Apps Challenge/ Goiânia</span>
-            <span class="comp-date badge-ano-local" style="font-family: 'Consolas', monospace; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: rgba(255, 255, 255, 0.06); color: var(--muted);">2024 - Goiânia</span>
+      <!-- Comp 6: NASA Space Apps -->
+      <div class="contrib-row" style="padding: 12px 0;">
+        <div style="display: flex; gap: 16px; align-items: flex-start;">
+          <div class="minimal-icon"><img src="logos/logo_nasa.webp" alt="NASA"></div>
+          <div style="flex: 1;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+              <span style="font-family: 'Inter', sans-serif; font-size: 16.5px; font-weight: 600; color: var(--text-bright);">NASA Space Apps Challenge</span>
+              <span class="comp-date badge-ano-local" style="font-family: 'Consolas', monospace; font-size: 11.5px; padding: 2px 8px; border-radius: 4px; background: rgba(0, 0, 0, 0.05); color: var(--muted);">2024 • Goiânia</span>
+            </div>
+            <span class="contrib-desc" style="margin-top: 6px; display: block;" data-i18n="comp.nasa.desc">Maratona de 2 dias para desenvolvimento de solução de dados com bases abertas da NASA.</span>
           </div>
-          <span class="contrib-desc" style="margin-top: 6px; display: block;" data-i18n="comp.nasa.desc">maratona de 2 dias para desenvolvimento de solução de dados com bases abertas da NASA.</span>
         </div>
       </div>
 

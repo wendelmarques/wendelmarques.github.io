@@ -124,14 +124,19 @@ const translations = {
     'vol.preview.alt': 'Prévia do evento',
 
     // Competitions & Hackathons
-    'comp.usp.badge': 'selecionado para imersão presencial de 1 semana',
+    'comp.usp.badge': '★ equipe selecionada p/ Imersão Presencial na USP (1 semana)',
     'comp.usp.desc': 'Envolveu o desenvolvimento de solução com IA GEN, visão computacional, similaridade vetorial e RAG para construção de solução de impacto social.',
+    'comp.startupschool.badge': '🚀 Programa de Aceleração (4 meses)',
     'comp.startupschool.desc': 'Programa de 4 meses: desenvolvimento e validação prática de modelo de negócio com IA integrada.',
+    'comp.zerotohero.badge': '⚡ Maratona 3 Dias • MVP do Zero',
     'comp.zerotohero.desc': 'Maratona de 3 dias: construção de um MVP funcional do zero, apresentado a uma banca de especialistas.',
+    'comp.akcitcamp.badge': '🤖 Bootcamp Multiagente & Hackathon',
     'comp.akcitcamp.title': 'AKCIT Camp — Desenvolvendo Agentes de IA',
     'comp.akcitcamp.desc': 'Bootcamp de 4 semanas de orquestração multiagente (LangChain, CrewAI, LangGraph) com hackathon de 2 dias. Desenvolveu uma solução multiagêntica aplicada à educação.',
+    'comp.ideathon.badge': '💡 Campus Party • Inovação Social',
     'comp.ideathon.title': 'Ideathon Governo de Goiás — Autocuidado para 60+',
     'comp.ideathon.desc': 'Maratona de ideias na Campus Party para desenvolvimento de solução voltada às pessoas 60+. Foram duas maratonas, em cada uma pessoas 60+ participaram das equipes.',
+    'comp.nasa.badge': '🌌 Hackathon Internacional NASA',
     'comp.nasa.desc': 'Maratona de 2 dias para desenvolvimento de solução de dados com bases abertas da NASA.',
 
     // Footer
@@ -265,14 +270,19 @@ const translations = {
     'vol.preview.alt': 'Event preview',
 
     // Competitions & Hackathons
-    'comp.usp.badge': 'selected for a 1-week in-person immersion',
+    'comp.usp.badge': '★ team selected for in-person immersion at USP (1 week)',
     'comp.usp.desc': 'Involved developing a solution with generative AI, computer vision, vector similarity, and RAG to build a social-impact solution.',
+    'comp.startupschool.badge': '🚀 Acceleration Program (4 months)',
     'comp.startupschool.desc': '4-month program: developing and validating a business model in practice with integrated AI.',
+    'comp.zerotohero.badge': '⚡ 3-Day Marathon • MVP from Scratch',
     'comp.zerotohero.desc': '3-day marathon: building a functional MVP from scratch, presented to a panel of experts.',
+    'comp.akcitcamp.badge': '🤖 Multi-Agent Bootcamp & Hackathon',
     'comp.akcitcamp.title': 'AKCIT Camp — Building AI Agents',
     'comp.akcitcamp.desc': '4-week multi-agent orchestration bootcamp (LangChain, CrewAI, LangGraph) with a 2-day hackathon. Built a multi-agent solution applied to education.',
+    'comp.ideathon.badge': '💡 Campus Party • Social Innovation',
     'comp.ideathon.title': 'Goiás State Government Ideathon — Self-care for 60+',
     'comp.ideathon.desc': 'Idea marathon at Campus Party to develop a solution for people aged 60+. There were two marathons, each with people aged 60+ on the teams.',
+    'comp.nasa.badge': '🌌 NASA International Hackathon',
     'comp.nasa.desc': '2-day marathon to develop a data solution using NASA open data.',
 
     // Footer
