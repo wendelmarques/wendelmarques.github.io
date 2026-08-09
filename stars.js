@@ -40,10 +40,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let imgIndex = 0;
 
-  // Lateral lanes ONLY (Left margin: 2%-14% | Right margin: 84%-96%)
-  // Keeps the central text area and profile photo (15%-83%) 100% CLEAR!
-  const lanes = [2, 5, 8, 11, 14, 84, 87, 90, 93, 96];
-  const laneBusyUntil = new Array(lanes.length).fill(0);
+  // Desktop lanes: Both left margin (2%-14%) and right margin (84%-96%)
+  const desktopLanes = [2, 5, 8, 11, 14, 84, 87, 90, 93, 96];
+  // Mobile lanes: RIGHT margin ONLY (82%-94%)
+  const mobileLanes = [82, 85, 88, 91, 94];
+  const laneBusyUntil = {};
 
   let currentLightboxIndex = 0;
 
@@ -117,11 +118,15 @@ document.addEventListener('DOMContentLoaded', () => {
   function spawnPhoto() {
     if (document.hidden) return;
 
+    const isMobile = window.innerWidth <= 768;
+    const currentLanes = isMobile ? mobileLanes : desktopLanes;
+
     const now = Date.now();
     // Find lanes that are currently free
     const availableLaneIndices = [];
-    for (let i = 0; i < lanes.length; i++) {
-      if (now >= laneBusyUntil[i]) {
+    for (let i = 0; i < currentLanes.length; i++) {
+      const laneKey = currentLanes[i];
+      if (!laneBusyUntil[laneKey] || now >= laneBusyUntil[laneKey]) {
         availableLaneIndices.push(i);
       }
     }
@@ -130,10 +135,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Pick a random free lane
     const chosenLaneIdx = availableLaneIndices[Math.floor(Math.random() * availableLaneIndices.length)];
-    const chosenLeftPercent = lanes[chosenLaneIdx];
+    const chosenLeftPercent = currentLanes[chosenLaneIdx];
 
-    // DOUBLED LANE SPACING INTERVAL: 13 seconds between photos in the same lane
-    laneBusyUntil[chosenLaneIdx] = now + 13000;
+    // Spacing interval between photos in the same lane
+    laneBusyUntil[chosenLeftPercent] = now + (isMobile ? 7000 : 13000);
 
     const photoWrapper = document.createElement('div');
     photoWrapper.className = 'floating-photo';
