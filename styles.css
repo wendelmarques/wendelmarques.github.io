@@ -834,14 +834,22 @@ nav .inner{
 .row-date{font-size:11.5px; color:var(--muted); font-variant-numeric:tabular-nums; white-space:nowrap; flex:none; font-family:'Consolas', monospace;}
 .row-date.now{color:var(--green); font-weight:400;}
 .row-sub{font-size:11.5px; color:var(--muted-2); flex-basis:100%; margin-top:2px; line-height:1.55; font-family:'Consolas', monospace;}
-.row-sub .doi-link{
-  color:var(--muted-2);
-  text-decoration:underline;
-  text-decoration-color:var(--link-blue);
-  text-decoration-thickness:1.5px;
-  text-underline-offset:2px;
+.doi-link {
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
-.row-sub .doi-link:hover{color:var(--text);}
+.doi-link:hover {
+  color: #ee5843 !important;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.doi-link:hover svg,
+.doi-link:hover .link-arrow {
+  color: #ee5843 !important;
+  stroke: #ee5843 !important;
+  transform: translate(1px, -1px);
+}
 
 /* SUMMARY / PROSE PARAGRAPH */
 .summary-item{margin-bottom:26px;}
@@ -1455,11 +1463,12 @@ footer .inner{
 
 .cursor-blink {
   display: inline-block;
-  width: 8px;
-  height: 14px;
-  background-color: var(--text-bright);
-  vertical-align: text-bottom;
-  animation: cursor-blink-anim 1s step-end infinite;
+  width: 6px;
+  height: 12px;
+  background-color: #ee5843;
+  vertical-align: middle;
+  margin-left: 4px;
+  animation: cursor-blink 1s steps(2, start) infinite !important;
 }
 
 /* ============================================================
@@ -1614,6 +1623,11 @@ footer .inner{
 }
 
 @keyframes cursor-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes cursor-blink-anim {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
 }
@@ -2370,9 +2384,7 @@ footer .inner{
 
 
 .custom-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
+  display: inline;
   color: inherit;
   text-decoration: none;
 }
@@ -2387,7 +2399,10 @@ footer .inner{
 /* Alinhamento perfeito do SVG da seta fina */
 .link-arrow {
   display: inline-block;
+  vertical-align: middle;
   flex-shrink: 0;
+  margin-left: 2px;
+  margin-right: 4px;
   transition: transform 0.15s ease;
 }
 
@@ -2768,10 +2783,10 @@ footer .inner{
 
 .tech-badge {
   font-family: 'Consolas', monospace;
-  font-size: 11.5px;
+  font-size: 10.5px;
   font-weight: 500;
-  padding: 3px 10px;
-  border-radius: 6px;
+  padding: 2px 7px;
+  border-radius: 4px;
   background: rgba(0, 0, 0, 0.04);
   border: 1px solid rgba(0, 0, 0, 0.08);
   color: #333333;
