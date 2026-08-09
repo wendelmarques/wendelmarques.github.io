@@ -1246,6 +1246,7 @@ footer .inner{
 /* Hacker Links (Intro, Footer, and specific buttons) */
 .intro-social a,
 .footer-links a,
+.section-header-link,
 .btn.hacker-btn {
   font-family: 'Consolas', monospace !important;
   position: relative;
@@ -1267,6 +1268,7 @@ footer .inner{
 
 .intro-social a:hover,
 .footer-links a:hover,
+.section-header-link:hover,
 .btn.hacker-btn:hover {
   background: transparent !important;
   -webkit-text-fill-color: initial !important;
@@ -1289,6 +1291,7 @@ footer .inner{
 
 .intro-social a::before,
 .footer-links a::before,
+.section-header-link::before,
 .btn.hacker-btn::before {
   content: "[";
   color: #c0c0c0;
@@ -1297,6 +1300,7 @@ footer .inner{
 }
 .intro-social a::after,
 .footer-links a::after,
+.section-header-link::after,
 .btn.hacker-btn::after {
   content: "]";
   color: #c0c0c0;
@@ -1308,6 +1312,8 @@ footer .inner{
 .intro-social a:hover::after,
 .footer-links a:hover::before,
 .footer-links a:hover::after,
+.section-header-link:hover::before,
+.section-header-link:hover::after,
 .btn.hacker-btn:hover::before,
 .btn.hacker-btn:hover::after {
   color: inherit !important;
@@ -1319,7 +1325,9 @@ footer .inner{
 .intro-social a.link-gdg:hover::before,
 .intro-social a.link-gdg:hover::after,
 .footer-links a.link-gdg:hover::before,
-.footer-links a.link-gdg:hover::after {
+.footer-links a.link-gdg:hover::after,
+.section-header-link.link-gdg:hover::before,
+.section-header-link.link-gdg:hover::after {
   color: #4285F4 !important;
 }
 .section-header-btn {
@@ -1345,6 +1353,33 @@ footer .inner{
   transform: translateY(-1px);
   box-shadow: none;
 }
+
+/* Link Acessar (Voluntariado GDG) - Normal: Laranja / Hover: Fundo Branco + Cores do Google */
+.link-access-volunteering {
+  color: #ee5843 !important;
+  background: transparent !important;
+  border: 1px solid transparent !important;
+  transition: all 0.2s ease !important;
+}
+
+.link-access-volunteering span,
+.link-access-volunteering svg {
+  color: inherit;
+  transition: color 0.2s ease !important;
+}
+
+.link-access-volunteering:hover {
+  background: #ffffff !important;
+  border-color: #EA4335 !important;
+  box-shadow: 0 2px 6px rgba(234, 67, 53, 0.15) !important;
+  transform: translateY(-1px);
+}
+
+.link-access-volunteering:hover .l-b { color: #4285F4 !important; }
+.link-access-volunteering:hover .l-y { color: #FBBC05 !important; }
+.link-access-volunteering:hover .l-g { color: #34A853 !important; }
+.link-access-volunteering:hover .l-r { color: #EA4335 !important; }
+.link-access-volunteering:hover svg.link-arrow { color: #EA4335 !important; stroke: #EA4335 !important; }
 
 .cursor-blink {
   display: inline-block;

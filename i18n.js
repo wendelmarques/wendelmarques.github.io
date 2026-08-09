@@ -32,6 +32,7 @@ const translations = {
     // Buttons
     'btn.pdf': 'currículo em pdf',
     'btn.github': 'acessar GitHub',
+    'btn.access': '<span class="l-b">a</span><span class="l-y">c</span><span class="l-g">e</span><span class="l-r">s</span><span class="l-b">s</span><span class="l-y">a</span><span class="l-g">r</span>',
     'btn.back_blog': '← voltar para o blog',
 
     // Experience Summary & Roles
@@ -170,6 +171,7 @@ const translations = {
     // Buttons
     'btn.pdf': 'full resume (pdf)',
     'btn.github': 'view GitHub',
+    'btn.access': '<span class="l-b">a</span><span class="l-y">c</span><span class="l-g">c</span><span class="l-r">e</span><span class="l-b">s</span><span class="l-y">s</span>',
     'btn.back_blog': '← back to blog',
 
     // Experience Dates & Roles
