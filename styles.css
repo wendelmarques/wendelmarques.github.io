@@ -1463,6 +1463,7 @@ footer .inner{
   border-bottom: 1px solid var(--line);
 }
 .gh-section:last-child,
+#projetos,
 #competicoes {
   border-bottom: none !important;
   padding-bottom: 10px !important;
@@ -2376,7 +2377,7 @@ footer .inner{
   font-family: 'Inter', sans-serif;
   font-size: 18px;
   font-weight: 600;
-  color: #ee5843;
+  color: var(--text-bright);
   text-decoration: none;
   display: inline-flex;
   align-items: center;
@@ -2988,3 +2989,193 @@ p[data-i18n="hero.cta"],
 span[data-i18n="hero.cta"] {
   font-family: 'Inter', sans-serif !important;
 }
+
+/* Ensure expanded floating photo is always 100% on top of ALL text, headers, and content */
+.floating-photo.is-expanded {
+  z-index: 999999999 !important;
+}
+
+.photo-particles.has-expanded {
+  z-index: 999999999 !important;
+  overflow: visible !important;
+}
+
+/* ============================================================
+   GLOBAL PHOTO LIGHTBOX (Body Portal for 100% z-index dominance)
+   ============================================================ */
+.global-photo-lightbox {
+  display: none;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  background: rgba(0, 0, 0, 0.75) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  z-index: 999999999 !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.global-photo-lightbox.active {
+  display: flex !important;
+}
+
+.global-photo-lightbox .lightbox-content {
+  position: relative !important;
+  max-width: 90vw !important;
+  max-height: 85vh !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.global-photo-lightbox .lightbox-content img {
+  max-width: 90vw !important;
+  max-height: 85vh !important;
+  width: auto !important;
+  height: auto !important;
+  border-radius: 12px !important;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.5) !important;
+  border: 1px solid rgba(255,255,255,0.15) !important;
+  object-fit: contain !important;
+}
+
+.global-photo-lightbox .lightbox-close-btn {
+  position: absolute !important;
+  top: -16px !important;
+  right: -16px !important;
+  width: 36px !important;
+  height: 36px !important;
+  background: #ffffff !important;
+  color: #171717 !important;
+  border: none !important;
+  border-radius: 50% !important;
+  font-size: 24px !important;
+  line-height: 1 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3) !important;
+  z-index: 1000000000 !important;
+  transition: transform 0.15s ease !important;
+}
+
+.global-photo-lightbox .lightbox-close-btn:hover {
+  transform: scale(1.1) !important;
+}
+
+/* ============================================================
+   STICKY NAVBAR MASTER OVERRIDE (Always visible on scroll)
+   ============================================================ */
+nav {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  z-index: 100000 !important;
+  background: rgba(255, 255, 255, 0.94) !important;
+  backdrop-filter: blur(18px) saturate(140%) !important;
+  -webkit-backdrop-filter: blur(18px) saturate(140%) !important;
+  border-bottom: 1px solid var(--line) !important;
+}
+
+/* Espaçamento no topo do body para o conteúdo não ficar escondido atrás do menu fixo */
+body {
+  padding-top: 60px !important;
+}
+
+/* Premium Glassmorphic Lightbox Navigation Buttons in Accent Orange */
+.global-photo-lightbox .lightbox-close-btn {
+  position: absolute !important;
+  top: -24px !important;
+  right: -24px !important;
+  width: 44px !important;
+  height: 44px !important;
+  background: rgba(238, 88, 67, 0.85) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  z-index: 1000000000 !important;
+  box-shadow: 0 8px 24px rgba(238, 88, 67, 0.4) !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.global-photo-lightbox .lightbox-close-btn:hover {
+  background: #ffffff !important;
+  color: #ee5843 !important;
+  transform: scale(1.1) rotate(90deg) !important;
+  box-shadow: 0 12px 30px rgba(255, 255, 255, 0.4) !important;
+}
+
+.global-photo-lightbox .lightbox-arrow-btn {
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  width: 52px !important;
+  height: 52px !important;
+  background: rgba(238, 88, 67, 0.85) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  z-index: 1000000000 !important;
+  box-shadow: 0 8px 24px rgba(238, 88, 67, 0.4) !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  user-select: none !important;
+}
+
+.global-photo-lightbox .lightbox-arrow-btn:hover {
+  background: #ffffff !important;
+  color: #ee5843 !important;
+  transform: translateY(-50%) scale(1.12) !important;
+  box-shadow: 0 12px 30px rgba(255, 255, 255, 0.4) !important;
+}
+
+.global-photo-lightbox .lightbox-arrow-btn:active {
+  transform: translateY(-50%) scale(0.95) !important;
+}
+
+.global-photo-lightbox .lightbox-arrow-btn.prev-btn {
+  left: -28px !important;
+}
+
+.global-photo-lightbox .lightbox-arrow-btn.next-btn {
+  right: -28px !important;
+}
+
+@media (max-width: 768px) {
+  .global-photo-lightbox .lightbox-close-btn {
+    top: 12px !important;
+    right: 12px !important;
+    width: 38px !important;
+    height: 38px !important;
+  }
+  .global-photo-lightbox .lightbox-arrow-btn {
+    width: 44px !important;
+    height: 44px !important;
+  }
+  .global-photo-lightbox .lightbox-arrow-btn.prev-btn {
+    left: 8px !important;
+  }
+  .global-photo-lightbox .lightbox-arrow-btn.next-btn {
+    right: 8px !important;
+  }
+}
+

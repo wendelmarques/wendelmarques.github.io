@@ -9,7 +9,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest"><link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css?v=3">
 </head>
 <body class="home-page">
 
@@ -102,7 +102,7 @@
     <h1 class="intro-title" style="font-size: 24px; font-weight: 600; color: #171717; color: lab(7.78201 -0.0000149012 0); font-family: 'Inter', sans-serif; margin: 0 0 24px 0; letter-spacing:-0.03em; line-height: 32px; text-align: left;">
       wwwendel marques
       <span class="intro-description" data-i18n="hero.desc" data-i18n-html="true" style="display: block; color: #525252; color: lab(34.924 0 0); font-weight: 500; font-size: 24px; line-height: 32px; letter-spacing: -0.015em; font-family: 'Inter', sans-serif; margin-top: 12px;">
-      sou bacharelando em <span style="background: #ee5843; color: #ffffff !important; padding: 2px 6px; border-radius: 4px; font-weight: 500;">ciência da computação</span> pela ufg, atualmente aprofundando conhecimentos em <span style="background: #ee5843; color: #ffffff !important; padding: 2px 6px; border-radius: 4px; font-weight: 500;">engenharia de machine learning</span>. líder de comunidade, organizador voluntário de eventos de tecnologia e, nas horas vagas, fotógrafo de rua 📸
+      sou bacharelando em ciência da computação pela ufg, atualmente aprofundando conhecimentos em <span style="background: #ee5843; color: #ffffff !important; padding: 2px 6px; border-radius: 4px; font-weight: 500;">engenharia de machine learning</span>. líder de comunidade, organizador voluntário de eventos de tecnologia e, nas horas vagas, fotógrafo de rua 📸
       </span>
     </h1>
     
@@ -143,6 +143,15 @@
         <path d="M4.5 11.5L11.5 4.5M11.5 4.5H5.5M11.5 4.5V10.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
       </svg></a>
     </div>
+
+    <!-- Resumo Profissional (Card no mesmo estilo do GDG - sem logo e sem badge) -->
+    <div class="exp-summary-card" style="margin-top: 16px; margin-bottom: 24px; padding: 16px 20px; background: rgba(238, 88, 67, 0.025); border: 1px solid rgba(238, 88, 67, 0.15); border-radius: 12px;">
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+        <span style="font-family: 'Inter', sans-serif; font-size: 16.5px; font-weight: 600; color: #171717; display: inline-flex; align-items: center; gap: 6px; flex-wrap: wrap;" data-i18n="exp.summary.title" data-i18n-html="true">Machine Learning Engineer in Training | Computer Science <span style="white-space: nowrap; display: inline-flex; align-items: center; gap: 4px;">@ <img src="logos/logo_ufg.png" alt="UFG" style="height: 34px; width: auto; vertical-align: middle; display: inline-block; border-radius: 6px;"></span></span>
+      </div>
+      <span class="contrib-desc" style="margin-top: 8px; display: block; font-size: 13.5px; line-height: 21px; color: #525252;" data-i18n="exp.summary.desc">Tenho vivência acadêmica e profissional em Ciência de Dados, Engenharia de Dados e Visão Computacional. Atualmente aprofundando conhecimentos em Engenharia de Machine Learning (MLE), com foco em desenvolvimento de modelos, fluxos agênticos e sistemas inteligentes.</span>
+    </div>
+
     <div class="minimal-list">
       
       <!-- Item 1 -->
@@ -153,16 +162,6 @@
           <span class="minimal-role" data-i18n="exp.1.role">comunidade de startups</span>
         </div>
         <div class="minimal-date">26-<span data-i18n="exp.date.present">atual</span></div>
-      </div>
-
-      <!-- Item GDG -->
-      <div class="minimal-row">
-        <div class="minimal-left">
-          <div class="minimal-icon"><img src="logos/logo_gdg.png" alt="gdg"></div>
-          <span class="minimal-title" data-i18n="exp.gdg.title">gdg goiânia (voluntariado)</span>
-          <span class="minimal-role" data-i18n="exp.gdg.role">gerente de comunidade</span>
-        </div>
-        <div class="minimal-date">22-<span data-i18n="exp.date.present">atual</span></div>
       </div>
 
       <!-- Item 2 -->
@@ -237,7 +236,7 @@
       </div> -->
     </div>
   </div>
-
+</section>
 
 <!-- PROJETOS -->
 <section class="gh-section" id="projetos">
@@ -321,8 +320,7 @@
 
       <div class="repo-card-body">
         <h3 class="repo-card-title">
-          <a href="https://github.com/wendelmarques/materiais-de-estudos-sobre-data-science-deep-machine-learning" target="_blank" data-i18n="repo.title">
-            materiais-de-estudos-sobre-data-science-deep-machine-learning
+          <a href="https://github.com/wendelmarques/materiais-de-estudos-sobre-data-science-deep-machine-learning" target="_blank" data-i18n="repo.title">materiais de estudos sobre data science e machine learning
             <svg class="link-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M4.5 11.5L11.5 4.5M11.5 4.5H5.5M11.5 4.5V10.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
@@ -442,11 +440,22 @@
 <section class="gh-section" id="voluntariado">
   <div class="wrap">
     <h2 class="section-label" data-i18n="sec.volunteering">// VOLUNTARIADO &amp; comunidade</h2>
+    
+    <!-- Item GDG Goiânia (Liderança de Comunidade - Card Voluntariado) -->
+    <div class="vol-community-card" style="margin-top: 16px; margin-bottom: 24px; padding: 16px 20px; background: rgba(238, 88, 67, 0.025); border: 1px solid rgba(238, 88, 67, 0.15); border-radius: 12px; display: flex; gap: 14px; align-items: flex-start;">
+      <div class="minimal-icon" style="width: 36px; height: 36px; flex-shrink: 0; margin-top: 2px;"><img src="logos/logo_gdg.png" alt="gdg"></div>
+      <div style="flex: 1;">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+          <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+            <span style="font-family: 'Inter', sans-serif; font-size: 17px; font-weight: 600; color: #171717;" data-i18n="exp.gdg.title">Google Developer Group Goiânia</span>
+            <span style="font-family: 'Consolas', monospace; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: rgba(238, 88, 67, 0.08); color: #ee5843; border: 1px solid rgba(238, 88, 67, 0.2); font-weight: 600;" data-i18n="exp.gdg.badge">Comunidade Oficial Google</span>
+          </div>
+        </div>
+        <span class="contrib-desc" style="margin-top: 8px; display: block; font-size: 13.5px; line-height: 21px; color: #525252;" data-i18n="exp.gdg.desc">Sou uma das pessoas líderes da comunidade GDG Goiânia desde 2022. Organizamos conferências, promovemos meetups técnicos e contribuímos para a disseminação da computação na região Centro-Oeste do Brasil.</span>
+      </div>
+    </div>
+
     <div style="margin-bottom: 32px;">
-        <blockquote class="vol-blockquote" style="font-family: 'Inter', sans-serif; font-weight: 600; font-size: 17px; line-height: 25px; font-style: italic; color: rgb(23, 23, 23); margin: 0 0 16px 0; border-left: 3px solid #f9594a; padding-left: 16px; position: relative;" data-i18n="vol.hero">
-          Acredito que tecnologia se constrói em comunidade — e que ela só é relevante quando é plural!
-        </blockquote>
-      
       <div class="gh-feature-box" style="margin: 16px 0; max-width: 540px;">
         <div class="metrics-window" style="gap: 32px;">
           <div class="metric-item">
@@ -665,10 +674,17 @@
 
       </div>
 
-      <!-- Right side: Image/Video preview -->
-      <div class="accordion-preview">
-        <img id="acc-preview-img" src="images/slides/1.jpg" alt="Preview de Evento" data-i18n-attr="alt:vol.preview.alt" onerror="this.src='https://placehold.co/800x600/170b2c/d7b8ff?text=Foto'">
-        <iframe id="acc-preview-video" src="" title="Preview de Evento" data-i18n-attr="title:vol.preview.alt" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: none;"></iframe>
+      <!-- Right side: Image/Video preview & Quote directly underneath photo -->
+      <div class="acc-right-column" style="display: flex; flex-direction: column; gap: 16px; flex: 1;">
+        <div class="accordion-preview">
+          <img id="acc-preview-img" src="images/slides/1.jpg" alt="Preview de Evento" data-i18n-attr="alt:vol.preview.alt" onerror="this.src='https://placehold.co/800x600/170b2c/d7b8ff?text=Foto'" style="display: none;">
+          <iframe id="acc-preview-video" src="https://www.youtube.com/embed/Wq3UHWne1_0" title="Preview de Evento" data-i18n-attr="title:vol.preview.alt" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: block;"></iframe>
+        </div>
+
+        <!-- Frase manifesto (Blockquote) posicionada EXATAMENTE DEBAIXO DA FOTO -->
+        <blockquote class="vol-blockquote" style="font-family: 'Inter', sans-serif; font-weight: 600; font-size: 15px; line-height: 23px; font-style: italic; color: rgb(23, 23, 23); margin: 0; border-left: 3px solid #f9594a; padding-left: 14px; position: relative;" data-i18n="vol.hero">
+          Acredito que tecnologia se constrói em comunidade — e que ela só é relevante quando é plural!
+        </blockquote>
       </div>
     </div>
   </div>
@@ -689,7 +705,7 @@
             <span class="comp-title" style="font-family: 'Inter', sans-serif; font-size: 17px; font-weight: 600; color: var(--text-bright);">Campus Mobile - Claro/ USP</span>
             <span class="comp-date badge-ano-local" style="font-family: 'Consolas', monospace; font-size: 12px; padding: 2px 8px; border-radius: 4px; background: rgba(255, 255, 255, 0.06); color: var(--muted);">2025 - são paulo</span>
           </div>
-          <span class="comp-badge" style="font-family: 'Consolas', monospace; font-size: 12px; padding: 2px 8px; border-radius: 4px; background: #e6bdbb; color: #ff6159;" data-i18n="comp.usp.badge">selecionado para imersão presencial de 1 semana</span><span class="contrib-desc" style="margin-top: 6px; display: block;" data-i18n="comp.usp.desc">Envolveu o desenvolvimento solução com IA GEN, visão computacional, similaridade vetorial e RAG para construção de solução de impacto social.</span>
+          <span class="comp-badge" style="font-family: 'Consolas', monospace; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: rgba(238, 88, 67, 0.08); color: #ee5843; border: 1px solid rgba(238, 88, 67, 0.2); font-weight: 600;" data-i18n="comp.usp.badge">selecionado para imersão presencial de 1 semana</span><span class="contrib-desc" style="margin-top: 6px; display: block;" data-i18n="comp.usp.desc">Envolveu o desenvolvimento solução com IA GEN, visão computacional, similaridade vetorial e RAG para construção de solução de impacto social.</span>
         </div>
       </div>
 

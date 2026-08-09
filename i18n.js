@@ -16,7 +16,7 @@ const translations = {
     'blog.desc': 'Artigos sobre engenharia de machine learning, inteligência artificial aplicada, modelos de linguagem e vivências em comunidades de tecnologia.',
 
     // Intro
-    'hero.desc': 'sou bacharelando em <span style="background: #ee5843; color: #ffffff !important; padding: 2px 6px; border-radius: 4px; font-weight: 500;">ciência da computação</span> pela ufg, atualmente aprofundando conhecimentos em <span style="background: #ee5843; color: #ffffff !important; padding: 2px 6px; border-radius: 4px; font-weight: 500;">engenharia de machine learning</span>. líder de comunidade, organizador voluntário de eventos de tecnologia e, nas horas vagas, fotógrafo de rua 📸',
+    'hero.desc': 'sou bacharelando em ciência da computação pela ufg, atualmente aprofundando conhecimentos em <span style="background: #ee5843; color: #ffffff !important; padding: 2px 6px; border-radius: 4px; font-weight: 500;">engenharia de machine learning</span>. líder de comunidade, organizador voluntário de eventos de tecnologia e, nas horas vagas, fotógrafo de rua 📸',
     'hero.cta': 'para oportunidades de trabalho ou dúvidas gerais, entre em contato comigo pelo <a href="https://www.linkedin.com/in/wendelmarques/" target="_blank" rel="noopener noreferrer" class="link-email">linkedin</a> ou envie um e-mail para wendelmjs@proton.me<span class="cursor-blink" style="background: #a1a1a1;"></span>',
 
     // Section Titles
@@ -34,11 +34,15 @@ const translations = {
     'btn.github': 'acessar GitHub',
     'btn.back_blog': '← voltar para o blog',
 
-    // Experience Dates & Roles
+    // Experience Summary & Roles
+    'exp.summary.title': 'Machine Learning Engineer in Training | Computer Science <span style="white-space: nowrap; display: inline-flex; align-items: center; gap: 4px;">@ <img src="logos/logo_ufg.png" alt="UFG" style="height: 34px; width: auto; vertical-align: middle; display: inline-block; border-radius: 6px;"></span>',
+    'exp.summary.desc': 'Tenho vivência acadêmica e profissional em Ciência de Dados, Engenharia de Dados e Visão Computacional. Atualmente aprofundando conhecimentos em Engenharia de Machine Learning (MLE), com foco em desenvolvimento de modelos, fluxos agênticos e sistemas inteligentes.',
     'exp.date.present': 'atual',
     'exp.1.role': 'comunidade de startups',
-    'exp.gdg.role': 'gerente de comunidade',
-    'exp.gdg.title': 'gdg goiânia (voluntariado)',
+    'exp.gdg.title': 'Google Developer Group Goiânia',
+    'exp.gdg.role': '',
+    'exp.gdg.badge': 'Comunidade Oficial Google',
+    'exp.gdg.desc': 'Sou uma das pessoas líderes da comunidade GDG Goiânia desde 2022. Organizamos conferências, promovemos meetups técnicos e contribuímos para a disseminação da computação na região Centro-Oeste do Brasil.',
     'exp.2.role': 'tutoria em gen ai',
     'exp.3.role': 'ciência de dados',
     'exp.4.role': 'pd&i em visão computacional',
@@ -48,6 +52,7 @@ const translations = {
 
     // Featured Repo
     'repo.tag': 'Public Repo',
+    'repo.title': 'materiais de estudos sobre data science e machine learning',
     'repo.desc': '💻 📓 Guia prático de estudos (nível iniciante ao avançado) sobre Inteligência Artificial. Organiza trilhas de aprendizagem, canais, livros e roadmaps sobre Data Science, Machine Learning e Deep Learning (majoritariamente gratuitos e em PT-BR).',
     'repo.stars': 'estrelas',
     'repo.forks': 'forks',
@@ -149,7 +154,7 @@ const translations = {
     'blog.desc': 'Articles about machine learning engineering, applied artificial intelligence, language models, and experiences in tech communities.',
 
     // Intro
-    'hero.desc': 'I am a B.Sc. candidate in <span style="background: #ee5843; color: #ffffff !important; padding: 2px 6px; border-radius: 4px; font-weight: 500;">Computer Science</span> at UFG, currently specializing in <span style="background: #ee5843; color: #ffffff !important; padding: 2px 6px; border-radius: 4px; font-weight: 500;">Machine Learning Engineering</span>. Community leader, volunteer tech event organizer, and street photographer in my spare time 📸',
+    'hero.desc': 'bachelor candidate in computer science at ufg, currently deepening skills in <span style="background: #ee5843; color: #ffffff !important; padding: 2px 6px; border-radius: 4px; font-weight: 500;">machine learning engineering</span>. community leader, tech event volunteer, and street photographer in my spare time 📸',
     'hero.cta': 'for career opportunities or general inquiries, get in touch via <a href="https://www.linkedin.com/in/wendelmarques/" target="_blank" rel="noopener noreferrer" class="link-email">linkedin</a> or send an email to wendelmjs@proton.me<span class="cursor-blink" style="background: #a1a1a1;"></span>',
 
     // Section Titles
@@ -174,10 +179,16 @@ const translations = {
     'exp.2.role': 'gen ai tutoring',
     'exp.3.role': 'data science',
     'exp.4.role': 'computer vision r&d',
+    // Experience Summary & Roles
+    'exp.summary.title': 'Machine Learning Engineer in Training | Computer Science <span style="white-space: nowrap; display: inline-flex; align-items: center; gap: 4px;">@ <img src="logos/logo_ufg.png" alt="UFG" style="height: 34px; width: auto; vertical-align: middle; display: inline-block; border-radius: 6px;"></span>',
+    'exp.summary.desc': 'I have academic and professional experience in Data Science, Data Engineering, and Computer Vision. Currently deepening expertise in Machine Learning Engineering (MLE), focusing on model development, agentic workflows, and intelligent systems.',
     'exp.5.role': 'data engineering',
     'exp.6.role': 'IT Support',
     'exp.7.role': 'apprentice',
-    'exp.gdg.title': 'gdg goiânia (volunteer)',
+    'exp.gdg.title': 'Google Developer Group Goiânia',
+    'exp.gdg.role': '',
+    'exp.gdg.badge': 'Official Google Community',
+    'exp.gdg.desc': 'I have been one of the community leaders of GDG Goiânia since 2022. We organize conferences, promote technical meetups, and contribute to the dissemination of computing in the Midwest region of Brazil.',
 
     // Featured Repo
     'repo.tag': 'Public Repo',
