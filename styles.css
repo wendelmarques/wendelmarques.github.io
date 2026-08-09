@@ -2721,6 +2721,32 @@ footer .inner{
   background-color: #a13308;
 }
 
+@media (max-width: 600px) {
+  .repo-card-footer {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .repo-stats-group {
+    gap: 12px;
+  }
+  .repo-stat-item {
+    font-size: 11px !important;
+    gap: 4px !important;
+  }
+  .repo-stat-item svg {
+    width: 12px !important;
+    height: 12px !important;
+  }
+  .repo-lang-tag {
+    font-size: 10.5px !important;
+    gap: 4px !important;
+  }
+  .lang-dot {
+    width: 7px !important;
+    height: 7px !important;
+  }
+}
+
 /* Repo Card Hover Border Color Override */
 .repo-card-featured:hover {
   border-color: #f9594a !important;
